@@ -68,6 +68,8 @@ const styles = StyleSheet.create({
   txtInput: {
     fontSize: 15,
     width: '100%',
+    fontFamily: 'Roboto-Medium',
+    color: '#595858',
   },
   iconos: {
     width: 20,

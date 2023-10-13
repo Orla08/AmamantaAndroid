@@ -44,7 +44,6 @@ function App() {
         getDeviceAndSaveToLocalStorage();
     }, []); // El segundo argumento vacío [] asegura que esto se ejecute solo una vez al montar el componente
 
-
     return (
         <AuthProvider>
             <Navegacion />

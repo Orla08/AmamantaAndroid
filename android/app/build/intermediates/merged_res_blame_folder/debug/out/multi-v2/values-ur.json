@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.awesomeproject.app-mergeDebugResources-41:/values-ur/values-ur.xml",
+            "outputFile": "com.amamanta.app-mergeDebugResources-41:/values-ur/values-ur.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Orlando\\.gradle\\caches\\transforms-3\\b63984d3b045444cdc55f8997826a36d\\transformed\\jetified-play-services-basement-17.6.0\\res\\values-ur\\values.xml",

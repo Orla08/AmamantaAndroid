@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.awesomeproject.app-mergeDebugResources-41:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.amamanta.app-mergeDebugResources-41:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Orlando\\.gradle\\caches\\transforms-3\\c79493a5237e4ac851f05b99d295947e\\transformed\\jetified-firebase-messaging-21.1.0\\res\\values-zh-rTW\\values.xml",

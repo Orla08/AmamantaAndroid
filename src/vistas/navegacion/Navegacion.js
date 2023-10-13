@@ -22,7 +22,6 @@ import Registro from "../Registro.js";
 import Temporizador from "../Temporizador.js";
 import Prueba3 from "../Prueba3.js";
 import Prueba4 from "../Prueba4.js";
-import Cronometro2 from "../Cronometro2.js";
 import { AuthContext } from "../../context/AuthContext.js";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import SplashScreens from "../SplashScreens.js";
@@ -68,7 +67,6 @@ export const Navegacion = () => {
                             <Stack.Screen name="PosicionesAmamantar" component={PosicionesAmamantar} options={{ headerShown: false }} />
                             <Stack.Screen name="TiposDePezon" component={TiposDePezon} options={{ headerShown: false }} />
                             <Stack.Screen name="Cronometro" component={Cronometro} options={{ headerShown: false }} />
-                            <Stack.Screen name="Cronometro2" component={Cronometro2} options={{ headerShown: false }} />
                             <Stack.Screen name="Temporizador" component={Temporizador} options={{ headerShown: false }} />
                             <Stack.Screen name="Prueba" component={Prueba} options={{ headerShown: false }} />
                             <Stack.Screen name="Prueba3" component={Prueba3} options={{ headerShown: false }} />

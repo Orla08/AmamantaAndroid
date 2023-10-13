@@ -10,30 +10,29 @@ function Introduccion() {
     const xx = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
-        <View >
-            <View style={styles.containerIntroduccion}>
-                <Pressable style={styles.iconoAtras}
-                    onPress={() => { xx.navigate("Home") }}>
-                    <AntDesign name="left" size={24} color="white" />
-                </Pressable>
-                <Text style={styles.txtIntroduccion}>Introducción</Text>
+            <View >
+                <View style={styles.containerIntroduccion}>
+                    <Pressable style={styles.iconoAtras}
+                        onPress={() => { xx.navigate("Home") }}>
+                        <AntDesign name="left" size={24} color="white" />
+                    </Pressable>
+                    <Text style={styles.txtIntroduccion}>Introducción</Text>
+                </View>
+                <View>
+                    <Image
+                        style={styles.imagen}
+                    />
+                </View>
+                <View>
+                    <Text style={styles.txt_s}>Mamá estas en una etapa, la
+                        cual es uno de los mejores momentos de tu vida.
+                    </Text>
+                    <Text style={styles.txt_s}>
+                        Esta cartilla busca guiarte, dando respuesta a tus dudas e inquietudes y brindándote consejos para este
+                        proceso tan importante para ti, como para tu bebé y toda la familia.
+                    </Text>
+                </View>
             </View>
-            <View>
-                <Image
-                    style={styles.imagen}
-                    source={imgIntrouccion}
-                />
-            </View>
-            <View>
-                <Text style={styles.txt_s}>Mamá estas en una etapa, la
-                    cual es uno de los mejores momentos de tu vida.
-                </Text>
-                <Text style={styles.txt_s}>
-                    Esta cartilla busca guiarte, dando respuesta a tus dudas e inquietudes y brindándote consejos para este
-                    proceso tan importante para ti, como para tu bebé y toda la familia.
-                </Text>
-            </View>
-        </View>
         </SafeAreaView>
 
     );
@@ -55,7 +54,7 @@ const styles = StyleSheet.create({
     iconoAtras: {
         marginTop: 20,
         alignItems: 'flex-start',
-        marginTop:70
+        marginTop: 70
     },
     txtIntroduccion: {
         fontSize: 30,
@@ -63,11 +62,11 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop:60,
-        marginRight:85,
-        marginLeft:70,
+        marginTop: 60,
+        marginRight: 85,
+        marginLeft: 70,
         //marginHorizontal:80,
-        fontWeight :'600',
+        fontWeight: '600',
     },
     imagen: {
         backgroundColor: '#000',
@@ -78,13 +77,14 @@ const styles = StyleSheet.create({
         marginVertical: 30,
     },
     txt_s: {
-        padding:2,
+        padding: 2,
         fontSize: 20,
         marginHorizontal: 50,
         marginBottom: 10,
         textAlign: 'justify',
-        color:'#595858',
-        lineHeight: 19
+        color: '#595858',
+        lineHeight: 19,
+        fontFamily: 'Roboto-Regular'
     }
 
 })

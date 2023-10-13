@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.awesomeproject"
+3    package="com.amamanta"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -9,304 +9,304 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\debug\AndroidManifest.xml:5:5-77
-11-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\debug\AndroidManifest.xml:5:22-75
+11-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\debug\AndroidManifest.xml:5:5-77
+11-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\debug\AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:3:5-67
-12-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:3:22-64
+12-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:3:5-67
+12-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:3:22-64
 13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 13-->[com.facebook.flipper:flipper:0.182.0] C:\Users\Orlando\.gradle\caches\transforms-3\e13f88164840fe641a466d05cd8edac7\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:5-76
 13-->[com.facebook.flipper:flipper:0.182.0] C:\Users\Orlando\.gradle\caches\transforms-3\e13f88164840fe641a466d05cd8edac7\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:22-73
 14    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
-14-->[:react-native-background-timer] C:\Users\Orlando\Downloads\Amamantasin\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-68
-14-->[:react-native-background-timer] C:\Users\Orlando\Downloads\Amamantasin\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-65
+14-->[:react-native-background-timer] C:\Users\Orlando\Documents\cursonuevo\Amamanta\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-68
+14-->[:react-native-background-timer] C:\Users\Orlando\Documents\cursonuevo\Amamanta\node_modules\react-native-background-timer\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:22-65
 15    <permission
-15-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:10:5-12:47
-16        android:name="com.awesomeproject.permission.C2D_MESSAGE"
-16-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:11:9-63
+15-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:10:5-12:47
+16        android:name="com.amamanta.permission.C2D_MESSAGE"
+16-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:11:9-63
 17        android:protectionLevel="signature" />
-17-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:12:9-44
+17-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:12:9-44
 18
-19    <uses-permission android:name="com.awesomeproject.permission.C2D_MESSAGE" /> <!-- Required runtime permission to display notifications on Android 13 -->
-19-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:14:5-79
-19-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:14:22-76
+19    <uses-permission android:name="com.amamanta.permission.C2D_MESSAGE" /> <!-- Required runtime permission to display notifications on Android 13 -->
+19-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:14:5-79
+19-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:14:22-76
 20    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
-20-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:17:5-77
-20-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:17:22-74
+20-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:17:5-77
+20-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:17:22-74
 21    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-21-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:19:5-82
-21-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:19:22-79
+21-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:19:5-82
+21-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:19:22-79
 22    <!--
 23 Required so the device vibrates on receiving a push notification.
 24         Vibration settings of the device still apply.
 25    -->
 26    <uses-permission android:name="android.permission.VIBRATE" />
-26-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:24:5-66
-26-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:24:22-63
+26-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:24:5-66
+26-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:24:22-63
 27    <!--
 28 Use to restore notifications the user hasn't interacted with.
 29     They could be missed notifications if the user reboots their device if this isn't in place.
 30    -->
 31    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- START: ShortcutBadger -->
-31-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:29:5-81
-31-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:29:22-78
+31-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:29:5-81
+31-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:29:22-78
 32    <!-- Samsung -->
 33    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
-33-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:31:5-86
-33-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:31:22-83
+33-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:31:5-86
+33-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:31:22-83
 34    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- HTC -->
-34-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:32:5-87
-34-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:32:22-84
+34-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:32:5-87
+34-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:32:22-84
 35    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
-35-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:33:5-81
-35-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:33:22-78
+35-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:33:5-81
+35-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:33:22-78
 36    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- Sony -->
-36-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:34:5-83
-36-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:34:22-80
+36-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:34:5-83
+36-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:34:22-80
 37    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
-37-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:35:5-88
-37-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:35:22-85
+37-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:35:5-88
+37-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:35:22-85
 38    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- Apex -->
-38-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:36:5-92
-38-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:36:22-89
+38-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:36:5-92
+38-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:36:22-89
 39    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- Solid -->
-39-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:37:5-84
-39-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:37:22-81
+39-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:37:5-84
+39-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:37:22-81
 40    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- Huawei -->
-40-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:38:5-83
-40-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:38:22-80
+40-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:38:5-83
+40-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:38:22-80
 41    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
-41-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:39:5-91
-41-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:39:22-88
+41-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:39:5-91
+41-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:39:22-88
 42    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
-42-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:40:5-92
-42-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:40:22-89
+42-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:40:5-92
+42-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:40:22-89
 43    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- ZUK -->
-43-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:41:5-93
-43-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:41:22-90
+43-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:41:5-93
+43-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:41:22-90
 44    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- OPPO -->
-44-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:42:5-73
-44-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:42:22-70
+44-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:42:5-73
+44-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:42:22-70
 45    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
-45-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:43:5-82
-45-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:43:22-79
+45-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:43:5-82
+45-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:43:22-79
 46    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- EvMe -->
-46-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:44:5-83
-46-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:44:22-80
+46-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:44:5-83
+46-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:44:22-80
 47    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
-47-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:45:5-88
-47-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:45:22-85
+47-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:45:5-88
+47-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:45:22-85
 48    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
-48-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:46:5-89
-48-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:46:22-86
+48-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:46:5-89
+48-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:46:22-86
 49    <!--
 50         At a minimum the location module requires course permission, the app has the option
 51         to also include ACCESS_FINE_LOCATION and/or ACCESS_BACKGROUND_LOCATION
 52    -->
 53    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-53-->[com.onesignal:location:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\918001160198de4e6e3f77679db645b1\transformed\jetified-location-5.0.2\AndroidManifest.xml:13:5-81
-53-->[com.onesignal:location:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\918001160198de4e6e3f77679db645b1\transformed\jetified-location-5.0.2\AndroidManifest.xml:13:22-78
+53-->[com.onesignal:location:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\631659e79eb67a17e9e299a6e7fe8e6c\transformed\jetified-location-5.0.3\AndroidManifest.xml:13:5-81
+53-->[com.onesignal:location:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\631659e79eb67a17e9e299a6e7fe8e6c\transformed\jetified-location-5.0.3\AndroidManifest.xml:13:22-78
 54    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-54-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:10:5-79
-54-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:10:22-76
+54-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:10:5-79
+54-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:10:22-76
 55    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 55-->[androidx.work:work-runtime:2.7.1] C:\Users\Orlando\.gradle\caches\transforms-3\a93c68fb1d2792ca1942259f5092d83b\transformed\work-runtime-2.7.1\AndroidManifest.xml:28:5-77
 55-->[androidx.work:work-runtime:2.7.1] C:\Users\Orlando\.gradle\caches\transforms-3\a93c68fb1d2792ca1942259f5092d83b\transformed\work-runtime-2.7.1\AndroidManifest.xml:28:22-74
 56
 57    <application
-57-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:5:5-24:19
-58        android:name="com.awesomeproject.MainApplication"
-58-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:6:7-38
+57-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:5:5-24:19
+58        android:name="com.amamanta.MainApplication"
+58-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:6:7-38
 59        android:allowBackup="false"
-59-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:10:7-34
+59-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:10:7-34
 60        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 60-->[androidx.core:core:1.7.0] C:\Users\Orlando\.gradle\caches\transforms-3\75e4635b66fa4e4e84e71b52579837ce\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 61        android:debuggable="true"
 62        android:icon="@mipmap/ic_launcher"
-62-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:8:7-41
+62-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:8:7-41
 63        android:label="@string/app_name"
-63-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:7:7-39
+63-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:7:7-39
 64        android:roundIcon="@mipmap/ic_launcher_round"
-64-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:9:7-52
+64-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:9:7-52
 65        android:theme="@style/AppTheme"
-65-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:11:7-38
+65-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:11:7-38
 66        android:usesCleartextTraffic="true" >
-66-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\debug\AndroidManifest.xml:8:9-44
+66-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\debug\AndroidManifest.xml:8:9-44
 67        <activity
-67-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\debug\AndroidManifest.xml:11:9-111
+67-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\debug\AndroidManifest.xml:11:9-111
 68            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-68-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\debug\AndroidManifest.xml:11:19-83
+68-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\debug\AndroidManifest.xml:11:19-83
 69            android:exported="false" />
-69-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\debug\AndroidManifest.xml:11:84-108
+69-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\debug\AndroidManifest.xml:11:84-108
 70        <activity
-70-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:12:7-23:18
-71            android:name="com.awesomeproject.MainActivity"
-71-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:13:9-37
+70-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:12:7-23:18
+71            android:name="com.amamanta.MainActivity"
+71-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:13:9-37
 72            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-72-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:15:9-118
+72-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:15:9-118
 73            android:exported="true"
-73-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:18:9-32
+73-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:18:9-32
 74            android:label="@string/app_name"
-74-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:14:9-41
+74-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:14:9-41
 75            android:launchMode="singleTask"
-75-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:16:9-40
+75-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:16:9-40
 76            android:windowSoftInputMode="adjustResize" >
-76-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:17:9-51
+76-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:17:9-51
 77            <intent-filter>
-77-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:19:9-22:25
+77-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:19:9-22:25
 78                <action android:name="android.intent.action.MAIN" />
-78-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:20:13-65
-78-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:20:21-62
+78-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:20:13-65
+78-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:20:21-62
 79
 80                <category android:name="android.intent.category.LAUNCHER" />
-80-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:21:13-73
-80-->C:\Users\Orlando\Downloads\Amamantasin\android\app\src\main\AndroidManifest.xml:21:23-70
+80-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:21:13-73
+80-->C:\Users\Orlando\Documents\cursonuevo\Amamanta\android\app\src\main\AndroidManifest.xml:21:23-70
 81            </intent-filter>
 82        </activity>
 83
 84        <receiver
-84-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:49:9-60:20
+84-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:49:9-60:20
 85            android:name="com.onesignal.notifications.receivers.FCMBroadcastReceiver"
-85-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:50:13-86
+85-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:50:13-86
 86            android:exported="true"
-86-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:51:13-36
+86-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:51:13-36
 87            android:permission="com.google.android.c2dm.permission.SEND" >
-87-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:52:13-73
+87-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:52:13-73
 88
 89            <!-- High priority so OneSignal payloads can be filtered from other FCM receivers -->
 90            <intent-filter android:priority="999" >
-90-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:55:13-59:29
-90-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:55:28-50
+90-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:55:13-59:29
+90-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:55:28-50
 91                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-91-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:56:17-81
-91-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:56:25-78
+91-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:56:17-81
+91-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:56:25-78
 92
-93                <category android:name="com.awesomeproject" />
-93-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:58:17-61
-93-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:58:27-58
+93                <category android:name="com.amamanta" />
+93-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:58:17-61
+93-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:58:27-58
 94            </intent-filter>
 95        </receiver>
 96
 97        <service
-97-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:62:9-68:19
+97-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:62:9-68:19
 98            android:name="com.onesignal.notifications.services.HmsMessageServiceOneSignal"
-98-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:63:13-91
+98-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:63:13-91
 99            android:exported="false" >
-99-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:64:13-37
+99-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:64:13-37
 100            <intent-filter>
-100-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:65:13-67:29
+100-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:65:13-67:29
 101                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
-101-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:66:17-81
-101-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:66:25-78
+101-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:66:17-81
+101-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:66:25-78
 102            </intent-filter>
 103        </service>
 104
 105        <activity
-105-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:70:9-78:20
+105-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:70:9-78:20
 106            android:name="com.onesignal.notifications.activities.NotificationOpenedActivityHMS"
-106-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:71:13-96
+106-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:71:13-96
 107            android:exported="true"
-107-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:72:13-36
+107-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:72:13-36
 108            android:noHistory="true"
-108-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:73:13-37
+108-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:73:13-37
 109            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-109-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:74:13-72
+109-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:74:13-72
 110            <intent-filter>
-110-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:75:13-77:29
+110-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:75:13-77:29
 111                <action android:name="android.intent.action.VIEW" />
-111-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:76:17-69
-111-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:76:25-66
+111-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:76:17-69
+111-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:76:25-66
 112            </intent-filter>
 113        </activity>
 114
 115        <receiver
-115-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:80:9-82:39
+115-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:80:9-82:39
 116            android:name="com.onesignal.notifications.receivers.NotificationDismissReceiver"
-116-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:81:13-93
+116-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:81:13-93
 117            android:exported="true" />
-117-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:82:13-36
+117-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:82:13-36
 118        <receiver
-118-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:83:9-90:20
+118-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:83:9-90:20
 119            android:name="com.onesignal.notifications.receivers.BootUpReceiver"
-119-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:84:13-80
+119-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:84:13-80
 120            android:exported="true" >
-120-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:85:13-36
+120-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:85:13-36
 121            <intent-filter>
-121-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:86:13-89:29
+121-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:86:13-89:29
 122                <action android:name="android.intent.action.BOOT_COMPLETED" />
-122-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:87:17-79
-122-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:87:25-76
+122-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:87:17-79
+122-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:87:25-76
 123                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-123-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:88:17-82
-123-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:88:25-79
+123-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:88:17-82
+123-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:88:25-79
 124            </intent-filter>
 125        </receiver>
 126        <receiver
-126-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:91:9-97:20
+126-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:91:9-97:20
 127            android:name="com.onesignal.notifications.receivers.UpgradeReceiver"
-127-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:92:13-81
+127-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:92:13-81
 128            android:exported="true" >
-128-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:93:13-36
+128-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:93:13-36
 129            <intent-filter>
-129-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:94:13-96:29
+129-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:94:13-96:29
 130                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-130-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:95:17-84
-130-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:95:25-81
+130-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:95:17-84
+130-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:95:25-81
 131            </intent-filter>
 132        </receiver>
 133
 134        <activity
-134-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:99:9-105:75
+134-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:99:9-105:75
 135            android:name="com.onesignal.notifications.activities.NotificationOpenedActivity"
-135-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:100:13-93
+135-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:100:13-93
 136            android:excludeFromRecents="true"
-136-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:101:13-46
+136-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:101:13-46
 137            android:exported="true"
-137-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:102:13-36
+137-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:102:13-36
 138            android:noHistory="true"
-138-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:103:13-37
+138-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:103:13-37
 139            android:taskAffinity=""
-139-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:104:13-36
+139-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:104:13-36
 140            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-140-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:105:13-72
+140-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:105:13-72
 141        <activity
-141-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:106:9-111:75
+141-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:106:9-111:75
 142            android:name="com.onesignal.notifications.activities.NotificationOpenedActivityAndroid22AndOlder"
-142-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:107:13-110
+142-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:107:13-110
 143            android:excludeFromRecents="true"
-143-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:108:13-46
+143-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:108:13-46
 144            android:exported="true"
-144-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:109:13-36
+144-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:109:13-36
 145            android:noHistory="true"
-145-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:110:13-37
+145-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:110:13-37
 146            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-146-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:111:13-72
+146-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:111:13-72
 147
 148        <service
-148-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:13:9-16:43
+148-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:13:9-16:43
 149            android:name="com.onesignal.core.services.SyncService"
-149-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:14:13-67
+149-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:14:13-67
 150            android:exported="false"
-150-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:15:13-37
+150-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:15:13-37
 151            android:stopWithTask="true" />
-151-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:16:13-40
+151-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:16:13-40
 152        <service
-152-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:17:9-20:72
+152-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:17:9-20:72
 153            android:name="com.onesignal.core.services.SyncJobService"
-153-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:18:13-70
+153-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:18:13-70
 154            android:exported="false"
-154-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:19:13-37
+154-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:19:13-37
 155            android:permission="android.permission.BIND_JOB_SERVICE" />
-155-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:20:13-69
+155-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:20:13-69
 156
 157        <activity
-157-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:22:9-25:75
+157-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:22:9-25:75
 158            android:name="com.onesignal.core.activities.PermissionsActivity"
-158-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:23:13-77
+158-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:23:13-77
 159            android:exported="false"
-159-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:24:13-37
+159-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:24:13-37
 160            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-160-->[com.onesignal:core:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\407d2a34162aea801e82908e54d6303d\transformed\jetified-core-5.0.2\AndroidManifest.xml:25:13-72
+160-->[com.onesignal:core:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\9bafb143331205127c540a8802cc8838\transformed\jetified-core-5.0.3\AndroidManifest.xml:25:13-72
 161
 162        <meta-data
 162-->[com.facebook.soloader:soloader:0.10.5] C:\Users\Orlando\.gradle\caches\transforms-3\ec3312a013bd7d8a70466a1977a1dba4\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:12:9-14:37
@@ -319,7 +319,7 @@
 166-->[androidx.work:work-runtime:2.7.1] C:\Users\Orlando\.gradle\caches\transforms-3\a93c68fb1d2792ca1942259f5092d83b\transformed\work-runtime-2.7.1\AndroidManifest.xml:31:9-39:20
 167            android:name="androidx.startup.InitializationProvider"
 167-->[androidx.work:work-runtime:2.7.1] C:\Users\Orlando\.gradle\caches\transforms-3\a93c68fb1d2792ca1942259f5092d83b\transformed\work-runtime-2.7.1\AndroidManifest.xml:32:13-67
-168            android:authorities="com.awesomeproject.androidx-startup"
+168            android:authorities="com.amamanta.androidx-startup"
 168-->[androidx.work:work-runtime:2.7.1] C:\Users\Orlando\.gradle\caches\transforms-3\a93c68fb1d2792ca1942259f5092d83b\transformed\work-runtime-2.7.1\AndroidManifest.xml:33:13-68
 169            android:exported="false" >
 169-->[androidx.work:work-runtime:2.7.1] C:\Users\Orlando\.gradle\caches\transforms-3\a93c68fb1d2792ca1942259f5092d83b\transformed\work-runtime-2.7.1\AndroidManifest.xml:34:13-37
@@ -476,8 +476,8 @@
 247            <intent-filter>
 247-->[androidx.work:work-runtime:2.7.1] C:\Users\Orlando\.gradle\caches\transforms-3\a93c68fb1d2792ca1942259f5092d83b\transformed\work-runtime-2.7.1\AndroidManifest.xml:116:13-120:29
 248                <action android:name="android.intent.action.BOOT_COMPLETED" />
-248-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:87:17-79
-248-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:87:25-76
+248-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:87:17-79
+248-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:87:25-76
 249                <action android:name="android.intent.action.TIME_SET" />
 249-->[androidx.work:work-runtime:2.7.1] C:\Users\Orlando\.gradle\caches\transforms-3\a93c68fb1d2792ca1942259f5092d83b\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:17-73
 249-->[androidx.work:work-runtime:2.7.1] C:\Users\Orlando\.gradle\caches\transforms-3\a93c68fb1d2792ca1942259f5092d83b\transformed\work-runtime-2.7.1\AndroidManifest.xml:118:25-70
@@ -552,8 +552,8 @@
 287            <intent-filter>
 287-->[com.google.firebase:firebase-messaging:21.1.0] C:\Users\Orlando\.gradle\caches\transforms-3\c79493a5237e4ac851f05b99d295947e\transformed\jetified-firebase-messaging-21.1.0\AndroidManifest.xml:32:13-34:29
 288                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-288-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:56:17-81
-288-->[com.onesignal:notifications:5.0.2] C:\Users\Orlando\.gradle\caches\transforms-3\767fc6f6c5fef9562f618d9b6470262b\transformed\jetified-notifications-5.0.2\AndroidManifest.xml:56:25-78
+288-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:56:17-81
+288-->[com.onesignal:notifications:5.0.3] C:\Users\Orlando\.gradle\caches\transforms-3\e64c863fca7d98abbff78de3a5ad9e20\transformed\jetified-notifications-5.0.3\AndroidManifest.xml:56:25-78
 289            </intent-filter>
 290        </receiver>
 291        <!--
@@ -624,7 +624,7 @@
 328-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Orlando\.gradle\caches\transforms-3\e6be34a917a14134e90e9ecd24a658c5\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
 329            android:name="com.google.firebase.provider.FirebaseInitProvider"
 329-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Orlando\.gradle\caches\transforms-3\e6be34a917a14134e90e9ecd24a658c5\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
-330            android:authorities="com.awesomeproject.firebaseinitprovider"
+330            android:authorities="com.amamanta.firebaseinitprovider"
 330-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Orlando\.gradle\caches\transforms-3\e6be34a917a14134e90e9ecd24a658c5\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
 331            android:directBootAware="true"
 331-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Orlando\.gradle\caches\transforms-3\e6be34a917a14134e90e9ecd24a658c5\transformed\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43

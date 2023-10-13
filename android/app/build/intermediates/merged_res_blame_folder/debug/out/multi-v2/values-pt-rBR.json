@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.awesomeproject.app-mergeDebugResources-41:/values-pt-rBR/values-pt-rBR.xml",
+            "outputFile": "com.amamanta.app-mergeDebugResources-41:/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Orlando\\.gradle\\caches\\transforms-3\\795676a79a0c8e1cc25c8530d5bb032b\\transformed\\jetified-play-services-base-17.6.0\\res\\values-pt-rBR\\values.xml",

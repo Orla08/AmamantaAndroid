@@ -41,7 +41,7 @@ export default function Perfil() {
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={styles.containerCuerpo}>
                         <Image style={styles.imagen} source={require('../../assets/imgHome/perfil.png')} />
-                        <Text style={{ color: 'black', fontSize: 17, fontFamily: 'Roboto-regular' }}>{userInfo.nombre}</Text>
+                        <Text style={{ color: 'black', fontSize: 24, fontFamily: 'Roboto-Bold' }}>{userInfo.nombre}</Text>
                         <Text style={{ color: 'black', fontSize: 17, marginTop: 10, fontFamily: 'Roboto-regular' }}>{userInfo.email}</Text>
                         <Text style={{ color: 'black', fontSize: 17, marginTop: 10, fontFamily: 'Roboto-regular' }}>{userInfo.edad} Años de edad</Text>
                         <View style={{ marginTop: 70 }}>

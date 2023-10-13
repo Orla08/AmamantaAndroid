@@ -223,7 +223,7 @@ const Prueba3 = () => {
                   //itemStyle={styles.pickerItem} // Cambia el color de los números a negro
                   >
                     {[...Array(60).keys()].map((value) => (
-                      <Picker.Item key={value} label={value.toString()} value={value} />
+                      <Picker.Item style={{ color: '#6A71B9' }} key={value} label={value.toString()} value={value} />
                     ))}
                   </Picker>
                 </View>

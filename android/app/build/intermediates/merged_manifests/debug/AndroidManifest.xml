@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.awesomeproject"
+    package="com.amamanta"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -13,10 +13,10 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
     <permission
-        android:name="com.awesomeproject.permission.C2D_MESSAGE"
+        android:name="com.amamanta.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.awesomeproject.permission.C2D_MESSAGE" /> <!-- Required runtime permission to display notifications on Android 13 -->
+    <uses-permission android:name="com.amamanta.permission.C2D_MESSAGE" /> <!-- Required runtime permission to display notifications on Android 13 -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <!--
@@ -55,7 +55,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
-        android:name="com.awesomeproject.MainApplication"
+        android:name="com.amamanta.MainApplication"
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -68,7 +68,7 @@
             android:name="com.facebook.react.devsupport.DevSettingsActivity"
             android:exported="false" />
         <activity
-            android:name="com.awesomeproject.MainActivity"
+            android:name="com.amamanta.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:exported="true"
             android:label="@string/app_name"
@@ -90,7 +90,7 @@
             <intent-filter android:priority="999" >
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
-                <category android:name="com.awesomeproject" />
+                <category android:name="com.amamanta" />
             </intent-filter>
         </receiver>
 
@@ -165,7 +165,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.awesomeproject.androidx-startup"
+            android:authorities="com.amamanta.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.work.WorkManagerInitializer"
@@ -327,7 +327,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.awesomeproject.firebaseinitprovider"
+            android:authorities="com.amamanta.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />

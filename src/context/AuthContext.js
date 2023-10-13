@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
     const register = (nombre, edad, email, contrasena) => {
         return new Promise((resolve, reject) => {
             setIsLoading(true);
-            axios.post("http://10.1.80.101/php/registro2.php", {
+            axios.post("http://10.1.80.133/php/registro2.php", {
                 nombre,
                 edad,
                 email,
@@ -67,7 +67,7 @@ export const AuthProvider = ({ children }) => {
         return new Promise((resolve, reject) => {
             setIsLoading(true);
             axios
-                .post("http://10.1.80.101/php/login3.php", {
+                .post("http://10.1.80.133/php/login3.php", {
                     email,
                     contrasena,
                 })
@@ -83,6 +83,7 @@ export const AuthProvider = ({ children }) => {
                         setSuccess('si');
                         resolve(userInfo); // Resuelve la promesa en caso de éxito
                         console.log('Ingreso');
+                        AsyncStorage.setItem("id", userInfo.id);
                     } else {
                         setSuccess(null);
                         setActivo(true);
@@ -103,6 +104,10 @@ export const AuthProvider = ({ children }) => {
         setIsLoading(true);
         try {
             await AsyncStorage.removeItem('userInfo');
+            await AsyncStorage.removeItem('seno');
+            await AsyncStorage.removeItem('tokenDispositivo');
+            await AsyncStorage.removeItem('id');
+
             setTokenUsuario(0);
             setUserInfo({});
             setIsLoading(false);

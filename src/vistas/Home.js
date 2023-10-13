@@ -48,27 +48,27 @@ export default function Home() {
                     <ScrollView
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}>
-                        <Pressable
-                            onPress={() => { xx.navigate("ConsejosBebe") }}
-                        >
-                            <ImageBackground
-                                source={imgIntrouccion} style={[styles.imagenprueba,]}>
-                                <View style={styles.posicion}>
-                                    <Text style={styles.txtImagen}>Consejos para dormir el bebé</Text>
-                                </View>
-                            </ImageBackground>
-                        </Pressable>
-                        <Pressable
+                        {/* <TouchableOpacity
+                            onPress={() => { xx.navigate("ConsejosBebe") }}//Si van a modificar para que mande a otra vista solo le cambian el nombre
+                        > */}
+                        <ImageBackground
+                            source={imgIntrouccion} style={[styles.imagenprueba,]}>
+                            <View style={styles.posicion}>
+                                <Text style={styles.txtImagen}>Consejos para dormir el bebé</Text>
+                            </View>
+                        </ImageBackground>
+                        {/* </TouchableOpacity>
+                        <TouchableOpacity
                             onPress={() => { xx.navigate("DescansoBebe") }}
-                        >
-                            <ImageBackground
-                                source={imgIntrouccion2} style={[styles.imagenprueba,]}>
-                                <View style={styles.posicion}>
-                                    <Text style={styles.txtImagen2}>Posiciones
-                                        para el descanso del bebé</Text>
-                                </View>
-                            </ImageBackground>
-                        </Pressable>
+                        > */}
+                        <ImageBackground
+                            source={imgIntrouccion2} style={[styles.imagenprueba,]}>
+                            <View style={styles.posicion}>
+                                <Text style={styles.txtImagen2}>Posiciones
+                                    para el descanso del bebé</Text>
+                            </View>
+                        </ImageBackground>
+                        {/* </TouchableOpacity> */}
 
                     </ScrollView>
 

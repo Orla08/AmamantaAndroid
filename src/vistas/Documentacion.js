@@ -18,7 +18,7 @@ const Documentacion = () => {
                 <ScrollView showsVerticalScrollIndicator={false}>
                     <View style={{ marginTop: 10 }}>
                         <View style={styles.contenedoresDeTexto}>
-                            <Text style={styles.txtSubtitulos}>CAPITULO 1</Text>
+                            <Text style={styles.txtTitulos}>CAPITULO 1</Text>
                             <Text style={styles.txtSubtitulos}>¿Que es la lactancia materna?</Text>
                             <Text style={styles.txtCuerpos}>La lactancia materna les proporciona a los bebés todos los nutrientes que necesitan para crecer y que su sistema inmunológico se desarrole plenamente.
                                 La Organización Mundial de la Salud (OMS) y UNICEF recomiendan que la leche materna sea el alimento exclusivo de los bebés recién nacidos
@@ -26,7 +26,7 @@ const Documentacion = () => {
                             </Text>
                         </View>
                         <View style={styles.contenedoresDeTexto}>
-                            <Text style={styles.txtSubtitulos}>CAPITULO 2</Text>
+                            <Text style={styles.txtTitulos}>CAPITULO 2</Text>
                             <Text style={styles.txtSubtitulos}>Desde el inicio del embarazo una compleja interacción hormonal prepara el cuerpo para la lactancia.</Text>
                             <Text style={styles.txtCuerpos}>
                                 El cuerpo de cada mujer es diferente, pero la mayoría de las madres experimenta una serie de síntomas comunes que, aunque podrían llegar a
@@ -34,7 +34,7 @@ const Documentacion = () => {
                             </Text>
                             <Text style={styles.txtSubtitulos}>Durante el embarazo se producen muchos cambios que favorecen la preparacion para la lactanica, entre ellos:</Text>
                             <Text style={styles.containerConceptos}>
-                                <Text style={styles.conceptos}>Línea negra: </Text>
+                                <Text style={[styles.conceptos, { opacity: 0.7, }]}>Línea negra: </Text>
                                 <Text style={styles.txtCuerpos}>es la linea oscura que se desarrolla a través de su vientre durante el embarazo.</Text>
                             </Text>
                             <Text style={styles.containerConceptos}>
@@ -60,7 +60,7 @@ const Documentacion = () => {
                             </Text>
                         </View>
                         <View style={styles.contenedoresDeTexto}>
-                            <Text style={styles.txtSubtitulos}>CAPITULO 3</Text>
+                            <Text style={styles.txtTitulos}>CAPITULO 3</Text>
                             <Text style={styles.txtSubtitulos}>Beneficios de la lactancia materna:</Text>
                             <View style={{ marginBottom: 25 }}>
                                 <Text style={styles.conceptos}>Para la madre:</Text>
@@ -168,7 +168,7 @@ const Documentacion = () => {
                             </View>
                         </View>
                         <View style={styles.contenedoresDeTexto}>
-                            <Text style={styles.txtSubtitulos}>CAPITULO 4</Text>
+                            <Text style={styles.txtTitulos}>CAPITULO 4</Text>
                             <Text style={styles.conceptos}>¿Existen cambios en la leche?</Text>
                             <Text style={styles.txtCuerpos}>
                                 Si. Tu leche materna se modifica los días posteriores al nacimiento y sigue cambiando a medida que tu  bebé crece. Aprende que ocurrirá
@@ -233,7 +233,7 @@ const Documentacion = () => {
                             </Text>
                         </View>
                         <View style={styles.contenedoresDeTexto}>
-                            <Text style={styles.txtSubtitulos}>CAPITULO 5</Text>
+                            <Text style={styles.txtTitulos}>CAPITULO 5</Text>
                             <Text style={styles.txtSubtitulos}>Posiciones para amamantar y para la ubicación del bebé</Text>
                             <Text style={styles.txtCuerpos}>Independientemente de la postura que adopte la madre para amamantar, existen unos principios básicos que deben ser tenidos
                                 en cuenta y que facilitan el agarre del bebé y en consecuencia, la transferencia eficaz de leche y el vaciado adecuado del pecho.</Text>
@@ -299,7 +299,7 @@ const Documentacion = () => {
                             </View>
                         </View>
                         <View style={styles.contenedoresDeTexto}>
-                            <Text style={styles.txtSubtitulos}>CAPITULO 6</Text>
+                            <Text style={styles.txtTitulos}>CAPITULO 6</Text>
                             <Text style={styles.txtSubtitulos}>Tipos de pezón</Text>
                             <Text style={styles.txtCuerpos}>Existen diferentes tipos de pezón:</Text>
                             <Text style={{ textAlign: 'justify' }}>
@@ -314,7 +314,7 @@ const Documentacion = () => {
                                 <Text style={styles.conceptos}>-  </Text>
                                 <Text style={styles.txtCuerpos}>Plano</Text>
                             </Text>
-                            <Text style={styles.containerConceptos}>
+                            <Text style={{ marginBottom: 20 }}>
                                 <Text style={styles.conceptos}>-  </Text>
                                 <Text style={styles.txtCuerpos}>Alargado..</Text>
                             </Text>
@@ -401,7 +401,7 @@ const Documentacion = () => {
                             </Text>
                         </View>
                         <View style={styles.contenedoresDeTexto}>
-                            <Text style={styles.txtSubtitulos}>CAPITULO 7</Text>
+                            <Text style={styles.txtTitulos}>CAPITULO 7</Text>
                             <Text style={[styles.conceptos, { marginBottom: 15 }]}>La lactancia materna </Text>
                             <Text style={styles.txtCuerpos}>En la lactancia materna es frecuente que algún momento la madre tenga que extraerse la leche para su conversacion,
                                 para ofrecersela al bebé, donarla o desecharla. Hay muchas situaciones y circunstancias en las que es necesaria la extracción de leche: niños
@@ -517,22 +517,32 @@ const styles = StyleSheet.create({
     //     color: '#000'
     // },
     txtSubtitulos: {
-        fontSize: 25,
+        fontSize: 20,
+        color: '#6A71B9',
         marginBottom: 15,
-        color: '#000',
         textAlign: 'justify',
-        fontFamily: 'Roboto-Medium'
+        fontFamily: 'Poppins-Medium',
 
+    },
+    txtTitulos: {
+        fontSize: 23,
+        color: '#ffadc6',
+        marginBottom: 15,
+        textAlign: 'justify',
+        fontFamily: 'Poppins-Bold',
+        opacity: 0.7,
     },
     containerConceptos: {
         marginBottom: 20,
-        textAlign: 'justify'
+        textAlign: 'justify',
+        opacity: 0.7,
     },
     conceptos: {
         fontSize: 18,
+        color: '#6A71B9',
+        opacity: 0.7,
         textAlign: 'justify',
-        color: '#000',
-        fontFamily: 'Roboto-Medium'
+        fontFamily: 'Roboto-Medium',
 
     },
     txtCuerpos: {
@@ -541,8 +551,6 @@ const styles = StyleSheet.create({
         textAlign: 'justify',
         color: '#1b1a1a',
         fontFamily: 'Roboto-Regular'
-
-
     },
     imagen: {
         backgroundColor: '#000',

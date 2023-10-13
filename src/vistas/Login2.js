@@ -97,7 +97,6 @@ const Login2 = () => {
 
                 <Imputs
                     imagen={icoEmail}
-                    style={{ fontFamily: 'Roboto-Light' }}
                     name="email"
                     placeholder="Email"
                     datos={email}
@@ -115,7 +114,6 @@ const Login2 = () => {
 
                 <Imputs
                     imagen={icoContrasena}
-                    style={{ fontFamily: 'Roboto-Light' }}
                     name="contrasena"
                     placeholder="Contraseña"
                     datos={contrasena}
@@ -198,7 +196,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         flexDirection: 'row',
         borderRadius: 10,
-        alignItems: 'center'
+        alignItems: 'center',
+        color: '#595858'
     },
     inputs: {
         marginLeft: 10,

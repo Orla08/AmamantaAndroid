@@ -22,6 +22,7 @@ import axios from 'axios';
 const Prueba4 = () => {
     const [identificacion, setId] = useState('0');
     const [seno, setSeno] = useState('');
+    const [seno3, setSeno3] = useState('');
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
@@ -30,6 +31,7 @@ const Prueba4 = () => {
     const [registroHabilitado, setRegistroHabilitado] = useState(true);
     const [tokenDevice, setTokenDevice] = useState('');
     const [formattedTime, setFormattedTime] = useState('00:00:00');
+    const [isTimeUp, setIsTimeUp] = useState(false);
 
     const getDatosSesion = async () => {
         try {
@@ -37,6 +39,7 @@ const Prueba4 = () => {
             const seno2 = await AsyncStorage.getItem('seno');
             const device = await AsyncStorage.getItem('tokenDispositivo');
             setSeno(seno2 || 'NoSeno');
+            setSeno3(seno2 || 'NoSeno');
             setId(id || '0');
             setTokenDevice(device || 'nulo');
         } catch (error) {
@@ -54,7 +57,7 @@ const Prueba4 = () => {
 
     const ingresoDatos = async () => {
         try {
-            const response = await axios.post('http://10.1.80.72/php/notificaciones4.php', {
+            const response = await axios.post('http://10.1.80.133/php/notificaciones4.php', {
                 seno: seno,
                 tiempo: segundosTotal,
                 idDevice: tokenDevice,
@@ -77,40 +80,47 @@ const Prueba4 = () => {
 
         const startBackgroundTimer = () => {
             timerId = BackgroundTimer.setInterval(() => {
-                // Tu lógica de temporizador aquí
-                let newSeconds = seconds - 1;
-                let newMinutes = minutes;
-                let newHours = hours;
+                if (isTimerRunning) {
+                    // Tu lógica de temporizador aquí
+                    let newSeconds = seconds;
+                    let newMinutes = minutes;
+                    let newHours = hours;
 
-                if (newSeconds < 0) {
-                    newSeconds = 59;
-                    newMinutes = minutes - 1;
-
-                    if (newMinutes < 0) {
-                        newMinutes = 59;
-                        newHours = hours - 1;
-
-                        if (newHours < 0) {
-                            BackgroundTimer.clearInterval(timerId); // Detén el temporizador en segundo plano
-                            setIsTimerRunning(false);
-                            resetTimer();
-                            Alert.alert('Tiempo terminado', 'El temporizador ha llegado a cero.');//Los alertas no se muestran en segundo plano
+                    if (newSeconds === 0) {
+                        if (newMinutes === 0) {
+                            if (newHours === 0) {
+                                BackgroundTimer.clearInterval(timerId); // Detén el temporizador en segundo plano
+                                setIsTimerRunning(false);
+                                resetTimer();
+                                setIsTimeUp(true); // Marca que el tiempo se ha agotado
+                                showAlert(); // Mostrar una alerta
+                            } else {
+                                newHours -= 1;
+                                newMinutes = 59;
+                                newSeconds = 59;
+                            }
+                        } else {
+                            newMinutes -= 1;
+                            newSeconds = 59;
                         }
+                    } else {
+                        newSeconds -= 1;
                     }
-                }
-                setHours(newHours);
-                setMinutes(newMinutes);
-                setSeconds(newSeconds);
-                setFormattedTime(formatTime(newHours, newMinutes, newSeconds));
 
-                // Almacena el estado del temporizador en AsyncStorage cada segundo
-                AsyncStorage.setItem('timerState', JSON.stringify({
-                    hours: newHours,
-                    minutes: newMinutes,
-                    seconds: newSeconds,
-                    isTimerRunning: isTimerRunning,
-                    formattedTime: formatTime(newHours, newMinutes, newSeconds),
-                }));
+                    setHours(newHours);
+                    setMinutes(newMinutes);
+                    setSeconds(newSeconds);
+                    setFormattedTime(formatTime(newHours, newMinutes, newSeconds));
+
+                    // Almacena el estado del temporizador en AsyncStorage cada segundo
+                    AsyncStorage.setItem('timerState', JSON.stringify({
+                        hours: newHours,
+                        minutes: newMinutes,
+                        seconds: newSeconds,
+                        isTimerRunning: isTimerRunning,
+                        formattedTime: formatTime(newHours, newMinutes, newSeconds),
+                    }));
+                }
             }, 1000);
         };
 
@@ -170,101 +180,121 @@ const Prueba4 = () => {
                     <Text style={styles.txtIntroduccion}>Temporizador</Text>
                 </View>
                 <ScrollView showsVerticalScrollIndicator={false}>
-                    {isTimerRunning ? (
-                        <View style={styles.contenedorHora}>
-                            <View style={styles.Hora}>
-                                <Text style={styles.txtHora}>Hrs</Text>
-                                <Text style={styles.txtHora}>Min</Text>
-                                <Text style={styles.txtHora}>Seg</Text>
+                    <View style={{ paddingVertical: 50 }}>
+                        {isTimerRunning ? (
+                            <View style={styles.contenedorHora}>
+                                <View style={styles.Hora}>
+                                    <Text style={styles.txtHora}>Hrs</Text>
+                                    <Text style={styles.txtHora}>Min</Text>
+                                    <Text style={styles.txtHora}>Seg</Text>
+                                </View>
+                                <Text style={styles.horaFormateada}>
+                                    {formattedTime}
+                                </Text>
                             </View>
-                            <Text style={styles.horaFormateada}>
-                                {formattedTime}
-                            </Text>
+                        ) : (
+                            <>
+                                {seno == 'NoSeno' ? (
+                                    <Text style={styles.txtInformativo}>
+                                        Aún no has amamantando a tu bebé, se te olvido?
+                                        Puedes hacerlo antes de mandar un recordatorio;
+                                        En el formato HH:MM:SS escoja dentro de cuánto le recordaremos:
+                                    </Text>) : (
+                                    seno == 'derecho' ? (
+                                        <Text style={styles.txtInformativo}>
+                                            {`La ultima vez que amamantaste al niño fue con el seno ${seno}, que bueno sería para la próxima darle el seno izquierdo; ${'\n'} En el formato HH:MM:SS escoja dentro de cuánto le recordaremos:
+                                            `}
+                                        </Text>
+                                    ) : (
+                                        <Text style={styles.txtInformativo}>
+                                            {`La ultima vez que amamantaste al niño fue con el seno ${seno} que bueno seria para la próxima darle el seno derecho; ${'\n'} En el formato HH:MM:SS escoja dentro de cuánto le recordaremos:
+                                            `}
+                                        </Text>
+                                    )
+                                )
+                                }
+                                <View style={styles.timerContainer}>
+                                    <View style={{ alignItems: 'center' }}>
+                                        <Text style={{ color: '#ffadc6' }}>Hrs</Text>
+                                        <Picker
+                                            selectedValue={hours}
+                                            style={styles.picker}
+                                            onValueChange={(itemValue) => setHours(itemValue)}
+                                        >
+                                            {[...Array(24).keys()].map((value) => (
+                                                <Picker.Item
+                                                    style={{ color: '#6A71B9', backgroundColor: '#fff' }}
+                                                    key={value}
+                                                    label={value.toString()}
+                                                    value={value}
+                                                />
+                                            ))}
+                                        </Picker>
+                                    </View>
+                                    <Text style={styles.timerText}>:</Text>
+
+                                    <View style={{ alignItems: 'center' }}>
+                                        <Text style={{ color: '#ffadc6' }}>Min</Text>
+                                        <Picker
+                                            selectedValue={minutes}
+                                            style={styles.picker}
+                                            onValueChange={(itemValue) => setMinutes(itemValue)}
+                                        >
+                                            {[...Array(60).keys()].map((value) => (
+                                                <Picker.Item
+                                                    style={{
+                                                        color: '#6A71B9',
+                                                        backgroundColor: '#fff'
+                                                    }}
+                                                    key={value}
+                                                    label={value.toString()}
+                                                    value={value}
+                                                />
+                                            ))}
+                                        </Picker>
+                                    </View>
+
+                                    <Text style={styles.timerText}>:</Text>
+
+                                    <View style={{ alignItems: 'center' }}>
+                                        <Text style={{ color: '#ffadc6' }}>Seg</Text>
+                                        <Picker
+                                            selectedValue={seconds}
+                                            style={styles.picker}
+                                            onValueChange={(itemValue) => setSeconds(itemValue)}
+                                        >
+                                            {[...Array(60).keys()].map((value) => (
+                                                <Picker.Item
+                                                    style={{ color: '#6A71B9', backgroundColor: '#fff' }}
+                                                    key={value}
+                                                    label={value.toString()}
+                                                    value={value}
+                                                />
+                                            ))}
+                                        </Picker>
+                                    </View>
+                                </View>
+                            </>
+                        )}
+                        <View style={styles.contenedorBotones}>
+                            <TouchableOpacity onPress={() => { toggleTimer(); }}>
+                                {isTimerRunning ? (
+                                    <View style={styles.boton}>
+                                        <IconMaterial name="pause" size={40} color="#fff" />
+                                    </View>
+                                ) : (
+                                    <View style={styles.boton}>
+                                        <IconMaterial name="play" size={40} color="#fff" />
+                                    </View>
+                                )}
+                            </TouchableOpacity>
+
+                            <TouchableOpacity onPress={resetTimer}>
+                                <View style={styles.boton}>
+                                    <IconMaterial name="stop" size={40} color="#fff" />
+                                </View>
+                            </TouchableOpacity>
                         </View>
-                    ) : (
-                        <>
-                            <Text style={styles.txtInformativo}>
-                                En el formato HH:MM:SS escoja dentro de cuánto le recordaremos
-                            </Text>
-
-                            <View style={styles.timerContainer}>
-                                <View style={{ alignItems: 'center' }}>
-                                    <Text style={{ color: 'black' }}>Hrs</Text>
-                                    <Picker
-                                        selectedValue={hours}
-                                        style={styles.picker}
-                                        onValueChange={(itemValue) => setHours(itemValue)}
-                                    >
-                                        {[...Array(24).keys()].map((value) => (
-                                            <Picker.Item
-                                                style={{ color: 'black' }}
-                                                key={value}
-                                                label={value.toString()}
-                                                value={value}
-                                            />
-                                        ))}
-                                    </Picker>
-                                </View>
-                                <Text style={styles.timerText}>:</Text>
-
-                                <View style={{ alignItems: 'center' }}>
-                                    <Text style={{ color: 'black' }}>Min</Text>
-                                    <Picker
-                                        selectedValue={minutes}
-                                        style={styles.picker}
-                                        onValueChange={(itemValue) => setMinutes(itemValue)}
-                                    >
-                                        {[...Array(60).keys()].map((value) => (
-                                            <Picker.Item
-                                                style={{ color: 'black' }}
-                                                key={value}
-                                                label={value.toString()}
-                                                value={value}
-                                            />
-                                        ))}
-                                    </Picker>
-                                </View>
-
-                                <Text style={styles.timerText}>:</Text>
-
-                                <View style={{ alignItems: 'center' }}>
-                                    <Text style={{ color: 'black' }}>Seg</Text>
-                                    <Picker
-                                        selectedValue={seconds}
-                                        style={styles.picker}
-                                        onValueChange={(itemValue) => setSeconds(itemValue)}
-                                    >
-                                        {[...Array(60).keys()].map((value) => (
-                                            <Picker.Item
-                                                style={{ color: 'black' }}
-                                                key={value}
-                                                label={value.toString()}
-                                                value={value}
-                                            />
-                                        ))}
-                                    </Picker>
-                                </View>
-                            </View>
-                        </>
-                    )}
-                    <View style={styles.contenedorBotones}>
-                        <TouchableOpacity onPress={() => { toggleTimer(); }}>
-                            {isTimerRunning ? (
-                                <View style={styles.boton}>
-                                    <IconMaterial name="pause" size={40} color="#fff" />
-                                </View>
-                            ) : (
-                                <View style={styles.boton}>
-                                    <IconMaterial name="play" size={40} color="#fff" />
-                                </View>
-                            )}
-                        </TouchableOpacity>
-
-                        <TouchableOpacity onPress={resetTimer}>
-                            <View style={styles.boton}>
-                                <IconMaterial name="stop" size={40} color="#fff" />
-                            </View>
-                        </TouchableOpacity>
                     </View>
                 </ScrollView>
             </View>
@@ -302,10 +332,14 @@ const styles = StyleSheet.create({
         marginLeft: 60,
     },
     txtInformativo: {
-        color: 'black',
+        color: '#6A71B9',
         textAlign: 'center',
         marginBottom: 15,
-        fontSize: 20,
+        fontSize: 17,
+        paddingBottom: 20,
+        fontFamily: 'Roboto-Medium',
+        opacity: 0.7,
+        paddingHorizontal: 20
     },
     timerContainer: {
         flexDirection: 'row',
@@ -316,7 +350,8 @@ const styles = StyleSheet.create({
     },
     picker: {
         width: 100,
-        height: 200,
+        height: 100,
+        //backgroundColor: '#ffadc6'
     },
     pickerItem: {
         color: 'black',
@@ -348,7 +383,7 @@ const styles = StyleSheet.create({
     },
     timerText: {
         fontSize: 32,
-        color: 'black',
+        color: '#6A71B9',
     },
     timerControlText: {
         marginTop: 20,

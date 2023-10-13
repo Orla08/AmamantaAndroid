@@ -27,6 +27,7 @@ const Cronometro = () => {
     const [horas, setHoras] = useState(0);
     const [identificacion, setId] = useState('');
     const [seno, setSeno] = useState('');
+    const [seno2, setSeno2] = useState('');
     const [alert2, setAlert2] = useState(false);
 
 
@@ -36,6 +37,8 @@ const Cronometro = () => {
     const getDatosSesion = async () => { //En esta funcion asincrona obtenemos la identificacion
         try {
             const id = await AsyncStorage.getItem('id');
+            const seno2 = await AsyncStorage.getItem('seno');
+            setSeno2(seno2 || 'NoSeno');
             setId(id || '0'); //Y se la seteamos a el state de ID para que cuando se ejecute la funcion de ingreso de datos ya tenga el id que se necesita enviar
         } catch (error) {
             console.log(error);
@@ -134,9 +137,8 @@ const Cronometro = () => {
     },[horas,minutos,segundos]); // */
 
     const ingresoDatos = async () => {
-
         try {
-            const response = await axios.post("http://10.1.80.72/php/datos.php", {
+            const response = await axios.post("http://10.1.80.133/php/datos.php", {
                 seno: seno,
                 /*             tiempo: tiempoAmamantando, */
                 tiempo: tiempo,
@@ -226,7 +228,7 @@ const Cronometro = () => {
     const xx = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
-            <View>
+            <View >
                 <View style={styles.containerIntroduccion}>
                     <Pressable style={styles.iconoAtras}
                         onPress={() => { xx.navigate("Home") }}>
@@ -235,8 +237,31 @@ const Cronometro = () => {
                     <Text style={styles.txtBienvenida}>Cronometro</Text>
                 </View>
                 <ScrollView showsVerticalScrollIndicator={false}>
+                    <View style={{paddingVertical:10}}>
                     <View >
-                        <Text style={styles.txtSuperior}> {!alert2 ? `Presione el seno con el${'\n'}cual amamantará al niño` : "Cambió de seno"} </Text>
+                        {/* <Text style={styles.txtSuperior}> {!alert2 ? `Presione el seno con el${'\n'}cual amamantará al niño` : "Cambió de seno"} </Text> */}
+                        {seno2 == 'NoSeno' ?
+                                (
+                                    <Text style={styles.txtInformativo}>
+                                        {`Presione el seno con el${'\n'}cual amamantará al niño`}
+                                    </Text>
+                                ) : 
+                                (
+                                    alert2 ? 
+                                    <Text style={styles.txtInformativo}>Cambió de seno</Text>:
+                                        seno2 == 'derecho' ? (
+                                            <Text style={styles.txtInformativo2}>
+                                                {`La ultima vez que amamantaste al niño fue con el seno ${seno2}, que bueno sería que ahora lo amamantes con el izquierdo:
+                                                `}
+                                            </Text>
+                                        ) : (
+                                            <Text style={styles.txtInformativo2}>
+                                                {`La ultima vez que amamantaste al niño fue con el seno ${seno2}, que bueno sería que ahora lo amamantes con el derecho:
+                                                `}
+                                            </Text>
+                                        )
+                                )
+                            }
                         <View style={styles.containerImg}>
                             <View>
                                 <TouchableOpacity
@@ -358,6 +383,7 @@ const Cronometro = () => {
                             </Text>
                         </TouchableOpacity>
                     </View>
+                    </View>
                 </ScrollView>
             </View>
         </SafeAreaView>
@@ -435,7 +461,7 @@ const styles = StyleSheet.create({
         //fontFamily: 'Roboto'
     },
     containerCuerpo: {
-        marginTop: 50
+        marginTop: 30
     },
     contCards: {
         marginBottom: 5,
@@ -444,19 +470,6 @@ const styles = StyleSheet.create({
         padding: 15,
         marginHorizontal: 73
     },
-    /* stopwatchContainer:{
-        marginTop:10,
-        marginHorizontal:40
-    },  
-    stopwatchText:{
-        color: '#fff',
-        fontSize: 30
-    },
-    iconos:{
-        width:30,
-        height:30,
-        //color:'#41219f'  este debe ser el color del icono
-    },*/
     buttonContainer: {
         flexDirection: 'row',
         marginHorizontal: 70
@@ -475,6 +488,24 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontWeight: '600',
         padding: 10
+    },
+    txtInformativo:{
+        color: '#6A71B9',
+        textAlign: 'center',
+        fontSize: 17,
+        paddingBottom: 20,
+        fontFamily: 'Roboto-Medium',
+        opacity: 0.7,
+        paddingHorizontal: 20
+    },
+    txtInformativo2:{
+        color: '#6A71B9',
+        textAlign: 'center',
+        fontSize: 17,
+        paddingBottom: 10,
+        fontFamily: 'Roboto-Medium',
+        opacity: 0.7,
+        paddingHorizontal: 20
     }
 })
 
