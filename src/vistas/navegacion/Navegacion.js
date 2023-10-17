@@ -28,6 +28,8 @@ import SplashScreens from "../SplashScreens.js";
 import Perfil from "../Perfil.js";
 
 import AntDesign from 'react-native-vector-icons/MaterialCommunityIcons';
+import Historial from "../Historial.js";
+import Historial1 from "../Historial1.js";
 
 
 
@@ -69,8 +71,10 @@ export const Navegacion = () => {
                             <Stack.Screen name="Cronometro" component={Cronometro} options={{ headerShown: false }} />
                             <Stack.Screen name="Temporizador" component={Temporizador} options={{ headerShown: false }} />
                             <Stack.Screen name="Prueba" component={Prueba} options={{ headerShown: false }} />
-                            <Stack.Screen name="Prueba3" component={Prueba3} options={{ headerShown: false }} />
+                            {/* <Stack.Screen name="Prueba3" component={Prueba3} options={{ headerShown: false }} /> */}
                             <Stack.Screen name="Prueba4" component={Prueba4} options={{ headerShown: false }} />
+                            <Stack.Screen name="Historial" component={Historial} options={{ headerShown: false }} />
+                            <Stack.Screen name="Historial1" component={Historial1} options={{ headerShown: false }} />
                         </>
                     )
                 }

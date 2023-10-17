@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
     const register = (nombre, edad, email, contrasena) => {
         return new Promise((resolve, reject) => {
             setIsLoading(true);
-            axios.post("http://10.1.80.133/php/registro2.php", {
+            axios.post("http://192.168.177.101/php/registro2.php", {
                 nombre,
                 edad,
                 email,
@@ -67,7 +67,7 @@ export const AuthProvider = ({ children }) => {
         return new Promise((resolve, reject) => {
             setIsLoading(true);
             axios
-                .post("http://10.1.80.133/php/login3.php", {
+                .post("http://192.168.177.101/php/login3.php", {
                     email,
                     contrasena,
                 })

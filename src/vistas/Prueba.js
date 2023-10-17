@@ -1,190 +1,180 @@
-import React, { Component } from 'react';
-import { View, Text, Button, StyleSheet, TextInput, Pressable, Alert, TouchableOpacity } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useNavigation } from '@react-navigation/native';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { View, Text, StyleSheet, Pressable, Alert, TouchableOpacity, ScrollView, FlatList } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AntDesign from 'react-native-vector-icons/AntDesign'
 //import {withNavigation} from 'react-navigation'
 //import { useNavigation } from "@react-navigation/native";
 //import * as Notifications from 'expo-notifications';
 
-class Prueba extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      inputHours: '',
-      inputMinutes: '',
-      inputSeconds: '',
-      remainingSeconds: 0,
-      isRunning: false,
-    };
-  }
+function Prueba() {
 
-  // Función para iniciar el temporizador
-  startTimer = () => {
-    const { inputHours, inputMinutes, inputSeconds } = this.state;
-    const hours = parseInt(inputHours, 10);
-    const minutes = parseInt(inputMinutes, 10);
-    const seconds = parseInt(inputSeconds, 10);
+  const [idUser, setIdUser] = useState('');
+  const [seno, setSeno] = useState('');
+  const [opcion, setOpcion] = useState(1);
+  const [sumaTiempo, setSumaTiempo] = useState('');
+  const [datos, setDatos] = useState([]);
 
+  const getDatosSesion = async () => { //En esta funcion asincrona obtenemos la identificacion
+    try {
+      const id = await AsyncStorage.getItem('id');
+      const seno2 = await AsyncStorage.getItem('seno');
+      setSeno(seno2 || 'izquierdo');
+      setIdUser(id || '0'); //Y se la seteamos a el state de ID para que cuando se ejecute la funcion de ingreso de datos ya tenga el id que se necesita enviar
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  useEffect(() => {
+    getDatosSesion();  //Aqui se ejecuta la funcion de inmediato sin mirar las demas
+  }, []);
 
-    if (hours >= 0 && minutes >= 0 && seconds >= 0) {
-      const totalSeconds = hours * 3600 + minutes * 60 + seconds;
-      if (totalSeconds > 0) {
-        this.setState({ isRunning: true, remainingSeconds: totalSeconds });
-        this.timer = setInterval(this.tick, 1000); // Actualiza cada segundo
+  const ingresoDatos = async () => {
+    try {
+      const response = await axios.post("http://10.1.80.133/php/historial.php", {
+        idUser: idUser,
+      });
+      console.log(response.data.sumaTiempo);
+      console.log(response.data.registros);
+      if (response.data.result === "success") {
+        setSumaTiempo(response.data.sumaTiempo);
+        setDatos(response.data.registros)
       } else {
-        Alert.alert('Seleccione un tiempo válido antes de empezar.');
+        console.log("Error del try");
       }
-    } else {
-      Alert.alert('Ingrese valores numéricos válidos para las horas, minutos y segundos.');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const ingresoDatos2 = async () => {
+    try {
+      const response = await axios.post("http://10.1.80.133/php/historial2.php", {
+        idUser: idUser,
+      });
+      console.log(response.data.sumaTiempo);
+      if (response.data.result === "success") {
+        setSumaTiempo(response.data.sumaTiempo);
+        setDatos(response.data.registros)
+      } else {
+        console.log("Error del try");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const ingresoDatos3 = async () => {
+    try {
+      const response = await axios.post("http://10.1.80.133/php/historial3.php", {
+        idUser: idUser,
+      });
+      console.log(response.data.sumaTiempo);
+      if (response.data.result === "success") {
+        setSumaTiempo(response.data.sumaTiempo);
+        setDatos(response.data.registros)
+      } else {
+        console.log("Error del try");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const ingresoDatos4 = async () => {
+    try {
+      const response = await axios.post("http://10.1.80.133/php/historial4.php", {
+        idUser: idUser,
+      });
+      console.log(response.data.sumaTiempo);
+      if (response.data.result === "success") {
+        setSumaTiempo(response.data.sumaTiempo);
+        setDatos(response.data.registros)
+      } else {
+        console.log("Error del try");
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
-  // Función para detener el temporizador
-  stopTimer = () => {
-    this.setState({ isRunning: false });
-    clearInterval(this.timer);
-  };
-
-  // Función para reiniciar el temporizador
-  resetTimer = () => {
-    this.setState({
-      inputHours: '',
-      inputMinutes: '',
-      inputSeconds: '',
-      remainingSeconds: 0,
-      isRunning: false,
-    });
-    clearInterval(this.timer);
-  };
-
-  // Función para formatear segundos a "hh:mm:ss"
-  formatTime = (seconds) => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const remainingSeconds = seconds % 60;
-
-    return `${hours.toString().padStart(2, '0')}:${minutes
-      .toString()
-      .padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-  };
-
-  // Función para actualizar el contador de segundos
-  tick = () => {
-    this.setState((prevState) => ({
-      remainingSeconds: prevState.remainingSeconds - 1,
-    }));
-
-    if (this.state.remainingSeconds === 0) { //Si el contador llega a 0 manda la notificacion y el alert
-      this.stopTimer();
-      //this.sendNotification(); // Enviar notificación cuando el temporizador se agote
-      Alert.alert('Se acabo el tiempo');
-    }
-  };
-
-  // Función para enviar una notificación
-  /*  sendNotification = async () => {
-     try {
-       await Notifications.scheduleNotificationAsync({
-         content: {
-           title: 'Temporizador terminado',
-           body: '¡El temporizador ha finalizado!',
-         },
-         trigger: null, // Notificación inmediata
-       });
-     } catch (error) {
-       console.error('Error al programar la notificación:', error);
-     }
-     
-   }; */
-
-  componentWillUnmount() {
-    clearInterval(this.timer); // Limpia el temporizador cuando el componente se desmonta
-  }
+  const TableHeader = () => (
+    <View style={styles.row}>
+      <Text style={[styles.cell, styles.header]}>Seno</Text>
+      <Text style={[styles.cell, styles.header]}>Tiempo</Text>
+      <Text style={[styles.cell, styles.header]}>Fecha</Text>
+    </View>
+  );
 
 
 
-  render() {
-    const { inputHours, inputMinutes, inputSeconds, remainingSeconds, isRunning } = this.state;
-    const formattedTime = this.formatTime(remainingSeconds);
-
-    const { navigation } = this.props;
-
-    // const navegacionb = useNavigation();
-    return (
-      <View style={styles.container}>
+  const xx = useNavigation();
+  return (
+    <SafeAreaView style={styles.container}>
+      <View >
         <View style={styles.containerIntroduccion}>
-          <Pressable style={styles.iconoAtras} onPress={() => { navigation.navigate("Home") }}>
+          <Pressable style={styles.iconoAtras}
+            onPress={() => { xx.navigate("Historial") }}>
             <AntDesign name="left" size={24} color="white" />
           </Pressable>
-          <Text style={styles.txtBienvenida}>Cronómetro</Text>
+          <Text style={styles.txtIntroduccion}>Historial</Text>
         </View>
-        <Text style={styles.txtSuperior}>
-          Digite la cantidad de tiempo en la que desea volver amamantar al bebe, en el formato  (Horas:Minutos:Segundos)
-        </Text>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 80 }}>
-          <TextInput
-            style={styles.input}
-            placeholder=" Horas "
-            keyboardType="numeric"
-            onChangeText={(text) => this.setState({ inputHours: text })}
-            value={inputHours}
-          />
-          <Text style={{ marginTop: 10 }}> : </Text>
-          <TextInput
-            style={styles.input}
-            placeholder=" Minutos "
-            keyboardType="numeric"
-            onChangeText={(text) => this.setState({ inputMinutes: text })}
-            value={inputMinutes}
-          />
-          <Text style={{ marginTop: 10 }}> : </Text>
-          <TextInput
-            style={styles.input}
-            placeholder=" Segundos "
-            keyboardType="numeric"
-            onChangeText={(text) => this.setState({ inputSeconds: text })}
-            value={inputSeconds}
-          />
-        </View>
-        <View >
-          {!isRunning ? (
-            <View style={styles.contenedorBoton1}>
-              <TouchableOpacity
-                onPress={this.startTimer}
-                style={styles.btns}
-              >
-                <Text>Iniciar</Text>
-              </TouchableOpacity>
-            </View>
-
-          ) : (
-            <View style={styles.contenedorBoton2}>
-              <TouchableOpacity
-                onPress={this.stopTimer}
-                style={styles.btns}
-              >
-                <Text>Detener</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                onPress={this.resetTimer}
-                style={styles.btns}
-              >
-                <Text>Reiniciar</Text>
-              </TouchableOpacity>
-            </View>
-
-
-          )}
-        </View>
-
-
-        <Text style={styles.temporizador}>
-          Temporizador: {'\n'}{'\n'}{formattedTime}
-        </Text>
       </View>
-    );
-  }
+
+      <View style={{ flex: 1, paddingBottom: 20 }}>
+
+        <View style={{ flex: 40, justifyContent: 'center', alignItems: 'center' }}>
+          {datos.length > 0 ?
+            (
+              <View style={{ alignItems: 'center', justifyContent: 'space-around', height: 100 }}>
+                <Text style={{ color: 'black' }} >El tiempo total que ha amamantando al bebé es de</Text>
+                <Text style={styles.txtTiempo}>{sumaTiempo}</Text>
+              </View>
+            ) :
+            (
+              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+                <TouchableOpacity
+                  style={{ backgroundColor: 'red', borderRadius: 30 }}
+                  onPress={() => (
+                    ingresoDatos(), // Llama a la función ingresoDatos
+                    console.log(idUser)
+                  )}>
+                  <Text style={{ color: 'black', textAlign: 'center', padding: 8 }}>Mandar</Text>
+                </TouchableOpacity>
+                <Text style={{ color: 'black', paddingTop: 40 }}>Seleccione un tipo de Historial</Text>
+              </View>
+            )}
+        </View>
+
+        <View style={{ flex: 60 }}>
+          {datos.length > 0 ?
+            (
+              <>
+                <View style={styles.container2}>
+                  <TableHeader />
+                  <FlatList
+                    data={datos}
+                    keyExtractor={(item) => item.id.toString()}
+                    renderItem={({ item }) => (
+                      <>
+                        <View style={styles.contenedorLista}>
+                          <Text style={{ color: 'black', textTransform: 'lowercase' }}>{item.seno}</Text>
+                          <Text style={{ color: 'black' }}>{item.tiempo}</Text>
+                          <Text style={{ color: 'black' }}>{item.fecha}</Text>
+                        </View>
+                      </>
+                    )}
+                  />
+                </View>
+              </>
+            ) :
+            (
+              ''
+            )}
+        </View>
+      </View>
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -198,53 +188,71 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     justifyContent: 'center',
     flexDirection: 'row',
+    display: 'flex',
   },
   iconoAtras: {
-    marginTop: 65,
+    alignItems: 'flex-start',
+    marginTop: 70
   },
-  txtBienvenida: {
+  txtIntroduccion: {
     fontSize: 30,
     color: '#fff',
     textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
     marginTop: 60,
+    marginRight: 120,
+    marginLeft: 90,
+    //marginHorizontal:80,
     fontWeight: '600',
-    marginHorizontal: 80,
   },
-  txtSuperior: {
-    marginVertical: 40,
-    textAlign: 'justify',
-    fontSize: 17,
-    marginHorizontal: 40,
-  },
-  input: {
-    alignItems: 'flex-end',
-    height: 30,
-    borderColor: 'gray',
-    borderWidth: 1,
-    paddingHorizontal: 4,
-    margin: 5,
-  },
-  contenedorBoton1: {
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  },
-  contenedorBoton2: {
-    justifyContent: 'space-around',
-    marginHorizontal: 90,
-    flexDirection: 'row'
-  },
-  btns: {
-    backgroundColor: '#6A71B9',
-    color: '#fff',
-    padding: 5,
-    borderRadius: 6
-  },
-  temporizador: {
-    marginTop: 60,
+  txt_s: {
+    padding: 2,
     fontSize: 20,
-    fontWeight: '600',
+    marginHorizontal: 50,
+    marginBottom: 10,
+    textAlign: 'justify',
+    color: '#595858',
+    lineHeight: 19,
+    fontFamily: 'Roboto-Regular'
+  },
+  txtTiempo: {
+    color: '#ccc',
+    fontFamily: 'Roboto-Bold',
+    fontSize: 16
+  },
+  container2: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingTop: 16,
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ffadc6',
+    color: 'black'
+  },
+  contenedorLista: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: 4,
+    borderBottomWidth: 1,
+    borderBottomColor: '#FFF0F7',
+    color: 'black'
+  },
+  cell: {
+    flex: 1,
     textAlign: 'center',
-  }
+  },
+  header: {
+    fontFamily: 'Roboto-Bold',
+    color: 'black',
+    textTransform: 'uppercase'
+  },
+
+
 });
 
 export default Prueba;

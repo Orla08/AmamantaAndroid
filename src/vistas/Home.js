@@ -23,6 +23,7 @@ const iconRecordatorio = require("../../assets/imgHome/recordatorio.png")
 const iconEnTuCuerpo = require("../../assets/imgHome/EntuCuerpo.png")
 const iconRecurso = require("../../assets/home/Recurso25.png")
 const iconPosiciones = require("../../assets/imgHome/posiciones.png")
+const iconHistorial = require("../../assets/imgHome/historial.jpeg")
 
 
 
@@ -212,6 +213,19 @@ export default function Home() {
                                     <Text style={styles.txt2}>Recordatorio {'\n'}de lactancia</Text>
                                 </TouchableOpacity>
                             </View>
+                            <View>
+                                <TouchableOpacity
+                                    onPress={() => { xx.navigate("Historial") }}
+                                >
+                                    <View style={[styles.containerImg,]}>
+                                        <Image
+                                            source={iconHistorial}
+                                            style={styles.imgCards2}
+                                        />
+                                    </View>
+                                    <Text style={styles.txt2}>Historial {'\n'}de lactancia</Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </View>
                 </ScrollView>
@@ -343,7 +357,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingLeft: 50,
-        paddingRight: 130,
+        paddingRight: 20,
         paddingBottom: 160,
         //marginHorizontal:45
     }

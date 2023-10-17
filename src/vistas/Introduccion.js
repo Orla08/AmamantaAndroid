@@ -4,7 +4,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 
 //SafeAreaView solo es en iphone
 
-const imgIntrouccion = require("../../assets/tonykroos.jpg");
+const imgIntrouccion = require("../../assets/imgHome/Introduccion.jpeg");
 
 function Introduccion() {
     const xx = useNavigation();
@@ -21,6 +21,7 @@ function Introduccion() {
                 <View>
                     <Image
                         style={styles.imagen}
+                        source={imgIntrouccion}
                     />
                 </View>
                 <View>
@@ -34,7 +35,6 @@ function Introduccion() {
                 </View>
             </View>
         </SafeAreaView>
-
     );
 }
 
@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
         display: 'flex',
     },
     iconoAtras: {
-        marginTop: 20,
         alignItems: 'flex-start',
         marginTop: 70
     },
@@ -71,10 +70,11 @@ const styles = StyleSheet.create({
     imagen: {
         backgroundColor: '#000',
         width: 300,
-        height: 300,
+        height: 230,
         borderRadius: 20,
         marginHorizontal: 50,
         marginVertical: 30,
+        objectFit: 'fill',
     },
     txt_s: {
         padding: 2,

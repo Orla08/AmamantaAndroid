@@ -138,7 +138,7 @@ const Cronometro = () => {
 
     const ingresoDatos = async () => {
         try {
-            const response = await axios.post("http://10.1.80.133/php/datos.php", {
+            const response = await axios.post("http://192.168.177.101/php/datos.php", {
                 seno: seno,
                 /*             tiempo: tiempoAmamantando, */
                 tiempo: tiempo,
@@ -251,12 +251,12 @@ const Cronometro = () => {
                                     <Text style={styles.txtInformativo}>Cambió de seno</Text>:
                                         seno2 == 'derecho' ? (
                                             <Text style={styles.txtInformativo2}>
-                                                {`La ultima vez que amamantaste al niño fue con el seno ${seno2}, que bueno sería que ahora lo amamantes con el izquierdo:
+                                                {`La ultima vez que amamantaste al niño fue con el seno ${seno2}, que bueno sería que ahora lo amamantes con el izquierdo
                                                 `}
                                             </Text>
                                         ) : (
                                             <Text style={styles.txtInformativo2}>
-                                                {`La ultima vez que amamantaste al niño fue con el seno ${seno2}, que bueno sería que ahora lo amamantes con el derecho:
+                                                {`La ultima vez que amamantaste al niño fue con el seno ${seno2}, que bueno sería que ahora lo amamantes con el derecho
                                                 `}
                                             </Text>
                                         )
@@ -275,13 +275,6 @@ const Cronometro = () => {
                                             setSeno('izquierdo')
                                             iniciarCronometro()
                                         }
-                                        /* if(seno != ""){
-                                            setSeno('')
-                                            detenerCronometro()
-                                        }else{
-                                            setSeno('izquierdo')
-                                            iniciarCronometro()
-                                        } */
                                     }
                                     }
                                     style={[{ paddingLeft: 57 }]}

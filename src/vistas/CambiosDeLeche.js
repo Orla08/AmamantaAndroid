@@ -1,9 +1,11 @@
 import { View, Text, ScrollView, StyleSheet, Image, Pressable, SafeAreaView } from 'react-native'
 import React from 'react'
-const imgIntrouccion = require("../../assets/tonykroos.jpg");
 import { useNavigation } from "@react-navigation/native";
 import AntDesign from 'react-native-vector-icons/AntDesign'
 //import Home from './HomeScreen.js';
+
+
+const imgIntrouccion = require("../../assets/imgHome/AmamantandoNiño.png");
 
 const CambiosDeLeche = () => {
     const xx = useNavigation();
@@ -129,12 +131,12 @@ const styles = StyleSheet.create({
         marginHorizontal: 40
     },
     imagen: {
-        backgroundColor: '#000',
-        width: 300,
+        width: 250,
         height: 300,
         borderRadius: 20,
-        marginHorizontal: 17,
+        marginHorizontal: 38,
         marginVertical: 30,
+        objectFit: 'fill'
     },
     txt_s: {
         fontSize: 20,

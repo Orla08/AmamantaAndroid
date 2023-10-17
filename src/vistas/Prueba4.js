@@ -198,16 +198,16 @@ const Prueba4 = () => {
                                     <Text style={styles.txtInformativo}>
                                         Aún no has amamantando a tu bebé, se te olvido?
                                         Puedes hacerlo antes de mandar un recordatorio;
-                                        En el formato HH:MM:SS escoja dentro de cuánto le recordaremos:
+                                        En el formato HH:MM:SS escoja dentro de cuánto le recordaremos
                                     </Text>) : (
                                     seno == 'derecho' ? (
                                         <Text style={styles.txtInformativo}>
-                                            {`La ultima vez que amamantaste al niño fue con el seno ${seno}, que bueno sería para la próxima darle el seno izquierdo; ${'\n'} En el formato HH:MM:SS escoja dentro de cuánto le recordaremos:
+                                            {`La ultima vez que amamantaste al niño fue con el seno ${seno}, que bueno sería para la próxima darle el seno izquierdo; ${'\n'} En el formato HH:MM:SS escoja dentro de cuánto le recordaremos
                                             `}
                                         </Text>
                                     ) : (
                                         <Text style={styles.txtInformativo}>
-                                            {`La ultima vez que amamantaste al niño fue con el seno ${seno} que bueno seria para la próxima darle el seno derecho; ${'\n'} En el formato HH:MM:SS escoja dentro de cuánto le recordaremos:
+                                            {`La ultima vez que amamantaste al niño fue con el seno ${seno} que bueno seria para la próxima darle el seno derecho; ${'\n'} En el formato HH:MM:SS escoja dentro de cuánto le recordaremos
                                             `}
                                         </Text>
                                     )
