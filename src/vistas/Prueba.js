@@ -16,6 +16,7 @@ function Prueba() {
   const [opcion, setOpcion] = useState(1);
   const [sumaTiempo, setSumaTiempo] = useState('');
   const [datos, setDatos] = useState([]);
+  const [cargando, setCargando] = useState(false);
 
   const getDatosSesion = async () => { //En esta funcion asincrona obtenemos la identificacion
     try {
@@ -33,8 +34,10 @@ function Prueba() {
   }, []);
 
   const ingresoDatos = async () => {
+    setCargando(true); // Finalizar la carga
+
     try {
-      const response = await axios.post("http://10.1.80.133/php/historial.php", {
+      const response = await axios.post("http://192.168.177.101/php/historial.php", {
         idUser: idUser,
       });
       console.log(response.data.sumaTiempo);
@@ -47,54 +50,8 @@ function Prueba() {
       }
     } catch (error) {
       console.log(error);
-    }
-  };
-  const ingresoDatos2 = async () => {
-    try {
-      const response = await axios.post("http://10.1.80.133/php/historial2.php", {
-        idUser: idUser,
-      });
-      console.log(response.data.sumaTiempo);
-      if (response.data.result === "success") {
-        setSumaTiempo(response.data.sumaTiempo);
-        setDatos(response.data.registros)
-      } else {
-        console.log("Error del try");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const ingresoDatos3 = async () => {
-    try {
-      const response = await axios.post("http://10.1.80.133/php/historial3.php", {
-        idUser: idUser,
-      });
-      console.log(response.data.sumaTiempo);
-      if (response.data.result === "success") {
-        setSumaTiempo(response.data.sumaTiempo);
-        setDatos(response.data.registros)
-      } else {
-        console.log("Error del try");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const ingresoDatos4 = async () => {
-    try {
-      const response = await axios.post("http://10.1.80.133/php/historial4.php", {
-        idUser: idUser,
-      });
-      console.log(response.data.sumaTiempo);
-      if (response.data.result === "success") {
-        setSumaTiempo(response.data.sumaTiempo);
-        setDatos(response.data.registros)
-      } else {
-        console.log("Error del try");
-      }
-    } catch (error) {
-      console.log(error);
+    } finally {
+      setCargando(false); // Finalizar la carga
     }
   };
 
@@ -126,22 +83,23 @@ function Prueba() {
         <View style={{ flex: 40, justifyContent: 'center', alignItems: 'center' }}>
           {datos.length > 0 ?
             (
-              <View style={{ alignItems: 'center', justifyContent: 'space-around', height: 100 }}>
-                <Text style={{ color: 'black' }} >El tiempo total que ha amamantando al bebé es de</Text>
-                <Text style={styles.txtTiempo}>{sumaTiempo}</Text>
+              <View >
+                <Text style={styles.txtInfo} >El tiempo total que ha amamantando al bebé es de</Text>
+                <Text style={{ color: 'black', fontSize: 30, fontFamily: 'Roboto.Bold', textAlign: 'center' }}>{sumaTiempo}</Text>
               </View>
             ) :
             (
-              <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{ justifyContent: 'center', alignItems: 'center', paddingVertical: 50 }}>
+                {cargando ? <Text style={{ color: 'black' }}>Cargando...</Text> : ''}
                 <TouchableOpacity
-                  style={{ backgroundColor: 'red', borderRadius: 30 }}
+                  style={styles.contenedorSubmit}
                   onPress={() => (
                     ingresoDatos(), // Llama a la función ingresoDatos
                     console.log(idUser)
                   )}>
-                  <Text style={{ color: 'black', textAlign: 'center', padding: 8 }}>Mandar</Text>
+                  <Text style={styles.txtInferiores}>Consultar</Text>
                 </TouchableOpacity>
-                <Text style={{ color: 'black', paddingTop: 40 }}>Seleccione un tipo de Historial</Text>
+                <Text style={styles.txtInfo}>Presione en consultar para visualizar el historial completo de lactancia</Text>
               </View>
             )}
         </View>
@@ -151,6 +109,7 @@ function Prueba() {
             (
               <>
                 <View style={styles.container2}>
+                  <Text style={[styles.header, { textAlign: 'center', fontSize: 20 }]}>Historial</Text>
                   <TableHeader />
                   <FlatList
                     data={datos}
@@ -206,15 +165,14 @@ const styles = StyleSheet.create({
     //marginHorizontal:80,
     fontWeight: '600',
   },
-  txt_s: {
-    padding: 2,
-    fontSize: 20,
-    marginHorizontal: 50,
-    marginBottom: 10,
-    textAlign: 'justify',
-    color: '#595858',
-    lineHeight: 19,
-    fontFamily: 'Roboto-Regular'
+  txtInfo: {
+    color: '#6A71B9',
+    opacity: 0.7,
+    fontFamily: 'Poppins-Medium',
+    paddingHorizontal: 50,
+    paddingVertical: 20,
+    textAlign: 'center',
+    fontSize: 20
   },
   txtTiempo: {
     color: '#ccc',
@@ -250,6 +208,21 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto-Bold',
     color: 'black',
     textTransform: 'uppercase'
+  },
+  contenedorSubmit: {
+    marginTop: 20,
+    backgroundColor: '#6A71B9',
+    textAlign: 'center',
+    borderRadius: 10,
+    marginHorizontal: 8
+  },
+  txtInferiores: {
+    padding: 10,
+    textAlign: 'center',
+    fontSize: 18,
+    color: '#fff',
+    fontWeight: '600',
+    padding: 10
   },
 
 

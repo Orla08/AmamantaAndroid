@@ -67,7 +67,7 @@ export const AuthProvider = ({ children }) => {
         return new Promise((resolve, reject) => {
             setIsLoading(true);
             axios
-                .post("http://192.168.177.101/php/login3.php", {
+                .post("https://www.plataforma50.com/pruebas/Amamanta/login3.php", {
                     email,
                     contrasena,
                 })

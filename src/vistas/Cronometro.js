@@ -138,7 +138,7 @@ const Cronometro = () => {
 
     const ingresoDatos = async () => {
         try {
-            const response = await axios.post("http://192.168.177.101/php/datos.php", {
+            const response = await axios.post("http://plataforma50.com/pruebas/Amamanta/datos.php", {
                 seno: seno,
                 /*             tiempo: tiempoAmamantando, */
                 tiempo: tiempo,
@@ -493,11 +493,11 @@ const styles = StyleSheet.create({
     },
     txtInformativo2:{
         color: '#6A71B9',
+        opacity: 0.7,
         textAlign: 'center',
         fontSize: 17,
         paddingBottom: 10,
         fontFamily: 'Roboto-Medium',
-        opacity: 0.7,
         paddingHorizontal: 20
     }
 })

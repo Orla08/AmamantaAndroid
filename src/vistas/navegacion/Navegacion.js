@@ -30,6 +30,7 @@ import Perfil from "../Perfil.js";
 import AntDesign from 'react-native-vector-icons/MaterialCommunityIcons';
 import Historial from "../Historial.js";
 import Historial1 from "../Historial1.js";
+import Historial2 from "../Historial2.js";
 
 
 
@@ -75,6 +76,7 @@ export const Navegacion = () => {
                             <Stack.Screen name="Prueba4" component={Prueba4} options={{ headerShown: false }} />
                             <Stack.Screen name="Historial" component={Historial} options={{ headerShown: false }} />
                             <Stack.Screen name="Historial1" component={Historial1} options={{ headerShown: false }} />
+                            <Stack.Screen name="Historial2" component={Historial2} options={{ headerShown: false }} />
                         </>
                     )
                 }

@@ -45,7 +45,7 @@ export default function Historial() {
                                         style={styles.imgCards2}
                                     />
                                 </View>
-                                <Text style={styles.txt2}>Consulta total {'\n'}de lactancia</Text>
+                                <Text style={styles.txt2}>Consulta total{'\n'}por seno</Text>
                             </TouchableOpacity>
                         </View>
                         <View>
@@ -58,7 +58,7 @@ export default function Historial() {
                                         style={styles.imgCards2}
                                     />
                                 </View>
-                                <Text style={styles.txt2}>Consulta total {'\n'}de lactancia</Text>
+                                <Text style={styles.txt2}>Consulta total {'\n'}por seno y fecha</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

@@ -57,7 +57,7 @@ const Prueba4 = () => {
 
     const ingresoDatos = async () => {
         try {
-            const response = await axios.post('http://10.1.80.133/php/notificaciones4.php', {
+            const response = await axios.post('http://plataforma50.com/pruebas/Amamanta/notificaciones4.php', {
                 seno: seno,
                 tiempo: segundosTotal,
                 idDevice: tokenDevice,

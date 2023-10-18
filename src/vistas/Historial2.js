@@ -1,24 +1,27 @@
-import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, ScrollView, Image, FlatList } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, ScrollView, Image, Modal, FlatList } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
-import AntDesign from 'react-native-vector-icons/AntDesign'
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import DatePicker from 'react-native-modern-datepicker';
 import axios from 'axios';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const imgSenoIzquier = require('../../assets/iconos/senIzquierdo.png')
 const imgSenoDerecho = require('../../assets/iconos/senDerecho.png')
 
+const Historial2 = () => {
 
-export default function Historial1() {
-
+    const [open, setOpen] = useState(false);
+    const [open2, setOpen2] = useState(false);
+    const [date, setDate] = useState('');
+    const [date2, setDate2] = useState('');
+    const [datos, setDatos] = useState([]);
+    const [activo, setActivo] = useState(false);
     const [idUser, setIdUser] = useState('');
     const [seno, setSeno] = useState('');
     const [sumaTiempo, setSumaTiempo] = useState('');
-    const [datos, setDatos] = useState([]);
-    const [activo, setActivo] = useState(false);
     const [cargando, setCargando] = useState(false);
-
 
     const getDatosSesion = async () => { //En esta funcion asincrona obtenemos la identificacion
         try {
@@ -36,9 +39,11 @@ export default function Historial1() {
     const ingresoDatos = async () => {
         setCargando(true); // Iniciar la carga
         try {
-            const response = await axios.post("http://192.168.177.101/php/historial2.php", {
+            const response = await axios.post("http://192.168.177.101/php/historial4.php", {
                 idUser: idUser,
                 seno: seno,
+                fecha1: date,
+                fecha2: date2,
             });
             console.log(response.data.sumaTiempo);
             console.log(response.data.registros);
@@ -55,22 +60,24 @@ export default function Historial1() {
         }
     };
 
-    useEffect(() => {
-        if (activo) {
-            ingresoDatos()
-        }
-    }, [seno, activo])
 
+    const handleOnPress = () => {
+        setOpen(!open);
+    }
+    const handleOnPress2 = () => {
+        setOpen2(!open2);
+    }
+    function handleChange(fecha) {
+        setDate(fecha)
 
-
-
+    } function handleChange2(fecha) {
+        setDate2(fecha)
+    }
 
 
     const xx = useNavigation();
-
     return (
         <SafeAreaView style={styles.container}>
-
             <View style={styles.containerIntroduccion}>
                 <TouchableOpacity style={styles.iconoAtras}
                     onPress={() => { xx.navigate("Home") }}>
@@ -85,7 +92,9 @@ export default function Historial1() {
                     {datos.length > 0 && activo ?
                         (
                             <View >
-                                <Text style={styles.txtInfo} >{`El tiempo total que ha amamantando al bebé con el seno ${seno} fue:`}</Text>
+                                <Text style={styles.txtInfo}>
+                                    {`El tiempo total que ha amamantando al bebé con el seno ${seno} entre ${date} y ${date2} fue:`}
+                                </Text>
                                 <Text style={{ color: 'black', fontSize: 30, fontFamily: 'Roboto.Bold', textAlign: 'center' }}>{sumaTiempo}</Text>
                             </View>
                         ) :
@@ -137,6 +146,44 @@ export default function Historial1() {
                                     </View>
                                 </View>
                                 <Text style={styles.txtInfo}>Presione el seno mediante el cual desea ver el historial de lactancia</Text>
+                                <View style={{ flexDirection: 'row', paddingHorizontal: 90 }}>
+                                    <View>
+                                        <TouchableOpacity
+                                            style={[styles.contenedorSubmit2]}
+                                            onPress={handleOnPress}>
+                                            <Text style={{ color: '#fff', fontSize: 20, padding: 3 }}>Fecha inicial</Text>
+                                        </TouchableOpacity>
+                                        <Text style={{ color: 'black', fontSize: 20, }}>{date}</Text>
+                                    </View>
+                                    <View>
+                                        <TouchableOpacity
+                                            style={[styles.contenedorSubmit2]}
+                                            onPress={handleOnPress2}>
+                                            <Text style={{ color: '#fff', fontSize: 20, padding: 3 }}>Fecha Final</Text>
+                                        </TouchableOpacity>
+                                        <Text style={{ color: 'black', fontSize: 20 }}>{date2}</Text>
+
+                                    </View>
+                                </View>
+                                {
+                                    seno != '' && date != '' && date2 != '' ?
+                                        (
+                                            <TouchableOpacity
+                                                style={styles.contenedorSubmit}
+                                                onPress={ingresoDatos}>
+                                                <Text style={styles.txtInferiores}>
+                                                    Consultar
+                                                </Text>
+                                            </TouchableOpacity>
+                                        ) :
+                                        (<View style={[styles.contenedorSubmit, { opacity: 0.7 }]}>
+                                            <Text style={styles.txtInferiores}>
+                                                Consultar
+                                            </Text>
+                                        </View>
+                                        )
+                                }
+
                             </>
                         )}
                 </View>
@@ -172,12 +219,50 @@ export default function Historial1() {
                             ''
                         )}
                 </View>
-
+                <Modal
+                    visible={open}
+                    animationType='slide'
+                    transparent={true}>
+                    <View style={styles.centeredView}>
+                        <View style={styles.modalView}>
+                            <DatePicker
+                                mode='calendar'
+                                selected={date}
+                                onDateChange={handleChange}
+                            />
+                            <TouchableOpacity
+                                style={styles.contenedorSubmit}
+                                onPress={handleOnPress}>
+                                <Text style={styles.txtInferiores}>Cerrar</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </Modal>
+                <Modal
+                    visible={open2}
+                    animationType='slide'
+                    transparent={true}>
+                    <View style={styles.centeredView}>
+                        <View style={styles.modalView}>
+                            <DatePicker
+                                mode='calendar'
+                                selected={date2}
+                                onDateChange={handleChange2}
+                            />
+                            <TouchableOpacity
+                                style={styles.contenedorSubmit}
+                                onPress={handleOnPress2}>
+                                <Text style={styles.txtInferiores}>Cerrar</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </Modal>
             </View>
         </SafeAreaView>
     )
 }
 
+export default Historial2
 
 const styles = StyleSheet.create({
     container: {
@@ -208,29 +293,7 @@ const styles = StyleSheet.create({
         //marginHorizontal:80,
         fontWeight: '600',
     },
-    txt_s: {
-        padding: 2,
-        fontSize: 20,
-        marginHorizontal: 50,
-        marginBottom: 10,
-        textAlign: 'justify',
-        color: '#595858',
-        lineHeight: 19,
-        fontFamily: 'Roboto-Regular'
-    },
-    imgCards2: {
-        width: 100,
-        height: 93,
-        objectFit: 'fill',
-    },
-    txt2: {
-        paddingTop: 6,
-        fontSize: 15,
-        textAlign: 'center',
-        color: '#595858',
-        lineHeight: 12,
-        fontFamily: 'Roboto-Regular'
-    },
+
     contenedorCards2: {
         justifyContent: 'space-between',
         paddingLeft: 50,
@@ -270,13 +333,37 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#FFF0F7',
         color: 'black'
-    }, row: {
+    },
+    row: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingVertical: 10,
         borderBottomWidth: 1,
         borderBottomColor: '#ffadc6',
         color: 'black'
+    },
+    centeredView: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 30
+    },
+    modalView: {
+        margin: 20,
+        borderBlockColor: '#FFF0F7',
+        borderRadius: 20,
+        width: '90%',
+        padding: 30,
+        alignItems: 'center',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5,
+        backgroundColor: '#FFF'
     },
     cell: {
         flex: 1,
@@ -292,11 +379,31 @@ const styles = StyleSheet.create({
         opacity: 0.7,
         fontFamily: 'Poppins-Medium',
         paddingHorizontal: 50,
-        paddingVertical: 50,
+        paddingTop: 30,
+        paddingBottom: 50,
         textAlign: 'center',
         fontSize: 20
+    },
+    contenedorSubmit: {
+        marginTop: 20,
+        backgroundColor: '#6A71B9',
+        textAlign: 'center',
+        borderRadius: 10,
+        marginHorizontal: 8
+    },
+    txtInferiores: {
+        padding: 10,
+        textAlign: 'center',
+        fontSize: 18,
+        color: '#fff',
+        fontWeight: '600',
+        padding: 10
+    },
+    contenedorSubmit2: {
+        backgroundColor: '#ffadc6',
+        textAlign: 'center',
+        borderRadius: 10,
+        marginHorizontal: 8,
     }
 
 })
-
-
