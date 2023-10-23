@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
     const register = (nombre, edad, email, contrasena) => {
         return new Promise((resolve, reject) => {
             setIsLoading(true);
-            axios.post("http://192.168.177.101/php/registro2.php", {
+            axios.post("https://www.plataforma50.com/pruebas/Amamanta/php/registro2.php", {
                 nombre,
                 edad,
                 email,

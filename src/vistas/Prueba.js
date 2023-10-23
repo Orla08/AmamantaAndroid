@@ -34,26 +34,43 @@ function Prueba() {
   }, []);
 
   const ingresoDatos = async () => {
-    setCargando(true); // Finalizar la carga
+    setCargando(true); // Comienza la carga
 
     try {
-      const response = await axios.post("http://192.168.177.101/php/historial.php", {
+      const response = await axios.post("https://www.plataforma50.com/pruebas/Amamanta/historial3.php", {
         idUser: idUser,
       });
-      console.log(response.data.sumaTiempo);
-      console.log(response.data.registros);
-      if (response.data.result === "success") {
-        setSumaTiempo(response.data.sumaTiempo);
-        setDatos(response.data.registros)
+
+      // Extrae la parte JSON de la respuesta
+      const jsonStartIndex = response.data.indexOf('{"result":');
+      if (jsonStartIndex !== -1) {
+        const jsonResponse = response.data.substring(jsonStartIndex);
+        const responseData = JSON.parse(jsonResponse);
+
+        const result = responseData.result;
+        const sumaTiempo = responseData.sumaTiempo;
+        const registros = responseData.registros;
+
+        console.log(result);
+        console.log(sumaTiempo);
+        console.log(registros);
+
+        if (result === "success") {
+          setSumaTiempo(sumaTiempo);
+          setDatos(registros);
+        } else {
+          console.log("Error en el resultado");
+        }
       } else {
-        console.log("Error del try");
+        console.log("Error: La respuesta no contiene un JSON válido");
       }
     } catch (error) {
       console.log(error);
     } finally {
-      setCargando(false); // Finalizar la carga
+      setCargando(false); // Finaliza la carga
     }
   };
+
 
   const TableHeader = () => (
     <View style={styles.row}>

@@ -39,19 +39,35 @@ const Historial2 = () => {
     const ingresoDatos = async () => {
         setCargando(true); // Iniciar la carga
         try {
-            const response = await axios.post("http://192.168.177.101/php/historial4.php", {
+            const response = await axios.post("https://www.plataforma50.com/pruebas/Amamanta/historial4.php", {
                 idUser: idUser,
                 seno: seno,
                 fecha1: date,
                 fecha2: date2,
             });
-            console.log(response.data.sumaTiempo);
-            console.log(response.data.registros);
-            if (response.data.result === "success") {
-                setSumaTiempo(response.data.sumaTiempo);
-                setDatos(response.data.registros)
+
+            // Extrae la parte JSON de la respuesta
+            const jsonStartIndex = response.data.indexOf('{"result":');
+            if (jsonStartIndex !== -1) {
+                const jsonResponse = response.data.substring(jsonStartIndex);
+                const responseData = JSON.parse(jsonResponse);
+
+                const result = responseData.result;
+                const sumaTiempo = responseData.sumaTiempo;
+                const registros = responseData.registros;
+
+                console.log(result);
+                console.log(sumaTiempo);
+                console.log(registros);
+
+                if (result === "success") {
+                    setSumaTiempo(sumaTiempo);
+                    setDatos(registros);
+                } else {
+                    console.log("Error en el resultado");
+                }
             } else {
-                console.log("Error del try");
+                console.log("Error: La respuesta no contiene un JSON válido");
             }
         } catch (error) {
             console.log(error);
@@ -59,6 +75,7 @@ const Historial2 = () => {
             setCargando(false); // Finalizar la carga
         }
     };
+
 
 
     const handleOnPress = () => {
@@ -80,7 +97,7 @@ const Historial2 = () => {
         <SafeAreaView style={styles.container}>
             <View style={styles.containerIntroduccion}>
                 <TouchableOpacity style={styles.iconoAtras}
-                    onPress={() => { xx.navigate("Home") }}>
+                    onPress={() => { xx.navigate("Historial") }}>
                     <AntDesign name="left" size={24} color="white" />
                 </TouchableOpacity>
                 <Text style={styles.txtIntroduccion}>Historial</Text>
