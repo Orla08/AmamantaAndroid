@@ -119,9 +119,9 @@ const styles = StyleSheet.create({
         display: 'flex',
     },
     iconoAtras: {
-        marginTop: 20,
         alignItems: 'flex-start',
-        marginTop: 70
+        marginTop: 70,
+        marginLeft: 30,
     },
     txtIntroduccion: {
         fontSize: 29,
@@ -130,10 +130,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 60,
-        marginLeft: 58,
-        marginRight: 65,
+        marginLeft: 40,
+        marginRight: 75,
         lineHeight: 30,
-        fontFamily: 'Roboto-Bold'
+        fontFamily: 'Roboto-Bold',
+        lineHeight: 30, // Ajusta el interlineado aquí
     },
     txt_s: {
         fontSize: 20,

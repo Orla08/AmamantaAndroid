@@ -57,7 +57,7 @@ const Prueba4 = () => {
 
     const ingresoDatos = async () => {
         try {
-            const response = await axios.post('http://plataforma50.com/pruebas/Amamanta/notificaciones4.php', {
+            const response = await axios.post('https://www.plataforma50.com/pruebas/Amamanta/notificaciones4.php', {
                 seno: seno,
                 tiempo: segundosTotal,
                 idDevice: tokenDevice,
@@ -316,9 +316,9 @@ const styles = StyleSheet.create({
         display: 'flex',
     },
     iconoAtras: {
-        marginTop: 20,
         alignItems: 'flex-start',
         marginTop: 70,
+        marginLeft: 30,
     },
     txtIntroduccion: {
         fontSize: 30,
@@ -328,8 +328,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 60,
-        marginRight: 70,
-        marginLeft: 60,
+        marginRight: 90,
+        marginLeft: 45,
     },
     txtInformativo: {
         color: '#6A71B9',

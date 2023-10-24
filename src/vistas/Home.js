@@ -338,9 +338,8 @@ const styles = StyleSheet.create({
     },
     ContainTxtHerr: {
         backgroundColor: '#FFB0CB',
-        marginRight: 200,
-        marginLeft: 50,
         borderRadius: 20,
+        marginHorizontal: 40,
         marginTop: 28,
         marginBottom: 40,
 
@@ -351,7 +350,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontFamily: 'Roboto-Medium',
         padding: 4,
-        //fontFamily: 'roboto-light'
     },
     contenedorCards2: {
         flexDirection: 'row',

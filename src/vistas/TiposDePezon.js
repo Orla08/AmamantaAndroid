@@ -153,9 +153,9 @@ const styles = StyleSheet.create({
         display: 'flex',
     },
     iconoAtras: {
-        marginTop: 20,
         alignItems: 'flex-start',
-        marginTop: 70
+        marginTop: 70,
+        marginLeft: 30,
     },
     txtIntroduccion: {
         fontSize: 30,
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginTop: 60,
         marginRight: 70,
-        marginLeft: 60
+        marginLeft: 40
     },
     imagen: {
         backgroundColor: '#000',

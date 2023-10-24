@@ -113,12 +113,11 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         justifyContent: 'center',
         flexDirection: 'row',
-        display: 'flex',
     },
     iconoAtras: {
-        marginTop: 20,
         alignItems: 'flex-start',
-        marginTop: 70
+        marginTop: 70,
+        marginLeft: 30,
     },
     txtIntroduccion: {
         fontSize: 30,
@@ -128,7 +127,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 60,
-        marginHorizontal: 40
+        marginLeft: 30,
+        marginRight: 60,
+        lineHeight: 30, // Ajusta el interlineado aquí
     },
     imagen: {
         width: 250,

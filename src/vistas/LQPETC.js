@@ -98,9 +98,9 @@ const styles = StyleSheet.create({
         display: 'flex',
     },
     iconoAtras: {
-        marginTop: 20,
         alignItems: 'flex-start',
-        marginTop: 70
+        marginTop: 70,
+        marginLeft: 30,
     },
     txtIntroduccion: {
         fontSize: 30,
@@ -110,8 +110,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 60,
-        marginLeft: 58,
-        marginRight: 65,
+        marginLeft: 40,
+        marginRight: 80,
         lineHeight: 28
     },
     imagen: {

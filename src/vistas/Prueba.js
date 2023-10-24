@@ -168,7 +168,8 @@ const styles = StyleSheet.create({
   },
   iconoAtras: {
     alignItems: 'flex-start',
-    marginTop: 70
+    marginTop: 70,
+    marginLeft: 30
   },
   txtIntroduccion: {
     fontSize: 30,

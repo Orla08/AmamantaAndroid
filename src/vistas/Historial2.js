@@ -296,7 +296,9 @@ const styles = StyleSheet.create({
     },
     iconoAtras: {
         alignItems: 'flex-start',
-        marginTop: 70
+        marginTop: 70,
+        marginLeft: 30,
+
     },
     txtIntroduccion: {
         fontSize: 30,
@@ -305,8 +307,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 60,
-        marginRight: 120,
-        marginLeft: 90,
+        marginRight: 130,
+        marginLeft: 80,
         //marginHorizontal:80,
         fontWeight: '600',
     },

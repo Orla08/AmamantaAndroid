@@ -138,7 +138,7 @@ const Cronometro = () => {
 
     const ingresoDatos = async () => {
         try {
-            const response = await axios.post("http://plataforma50.com/pruebas/Amamanta/datos.php", {
+            const response = await axios.post("https://www.plataforma50.com/pruebas/Amamanta/datos.php", {
                 seno: seno,
                 /*             tiempo: tiempoAmamantando, */
                 tiempo: tiempo,
@@ -237,7 +237,7 @@ const Cronometro = () => {
                     <Text style={styles.txtBienvenida}>Cronometro</Text>
                 </View>
                 <ScrollView showsVerticalScrollIndicator={false}>
-                    <View style={{paddingVertical:10}}>
+                    <View style={{paddingTop:10, paddingBottom:30 }}>
                     <View >
                         {/* <Text style={styles.txtSuperior}> {!alert2 ? `Presione el seno con el${'\n'}cual amamantará al niño` : "Cambió de seno"} </Text> */}
                         {seno2 == 'NoSeno' ?
@@ -397,8 +397,10 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         justifyContent: 'center',
         flexDirection: 'row'
-    }, iconoAtras: {
-        marginTop: 65
+    }, 
+    iconoAtras: {
+        marginTop: 75,
+        marginLeft:30,
     },
     txtBienvenida: {
         fontSize: 30,
@@ -406,7 +408,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 60,
         fontWeight: '600',
-        marginHorizontal: 80,
+        marginLeft: 50,
+        marginRight: 90,
         //fontFamily: 'Roboto'
     },
     txtSuperior: {
@@ -465,14 +468,15 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flexDirection: 'row',
-        marginHorizontal: 70
+        marginHorizontal: 70,
+        paddingBottom:20
     },
     contenedorSubmit: {
         marginTop: 20,
         backgroundColor: '#6A71B9',
         textAlign: 'center',
         borderRadius: 10,
-        marginHorizontal: 8
+        marginHorizontal: 8,
     },
     txtInferiores: {
         padding: 10,
